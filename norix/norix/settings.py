@@ -15,7 +15,10 @@ USER_AGENT = "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, lik
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'norix (+http://www.yourdomain.com)'
 
-ITEM_PIPELINES = {'norix.pipelines.NorixPipeline': 1000,}
+ITEM_PIPELINES = {
+    'norix.pipelines.PlayersPipeline': 100,
+    'norix.pipelines.SeminarPipeline': 1000,
+    }
 
 MONGODB_SERVER = "localhost"
 MONGODB_PORT = 27017

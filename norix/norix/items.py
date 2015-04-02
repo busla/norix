@@ -26,4 +26,4 @@ class PlayerItem(scrapy.Item):
     email = scrapy.Field()
     phone = scrapy.Field()
     status = scrapy.Field()
-    
+    seminars = scrapy.Field()

@@ -19,20 +19,7 @@ from urlparse import urlparse
 class NorixSpider(CrawlSpider):
 
     name = 'norix'
-    
-    '''
-    clubs = {
-        'armann': {
-            'user': 'levy',
-            'password': 'tkd',
-        },
-        'umfg': {
-            'user': 'levy',
-            'password': '190881',
-        },
-    }
-    '''
-
+   
     def __init__(self, arguments=None, *args, **kwargs):
         super(NorixSpider, self).__init__(*args, **kwargs)
         #self.url = kw.get('url')
@@ -71,7 +58,7 @@ class NorixSpider(CrawlSpider):
         
         #groups = response.xpath('//a[contains(@id, "linkMembers")]/text()').extract()
         seminars = response.xpath('//table[@class="itemListTable"]/tr')
-
+        items = []
         for i, seminar in enumerate(seminars):
             
             if i != 0:
@@ -81,13 +68,15 @@ class NorixSpider(CrawlSpider):
                 seminar_item['seminar'] = seminar.xpath('td[3]/text()').extract()[0].replace('\r\n','').strip()
                 seminar_item['period'] = seminar.xpath('td[4]/text()').extract()[0].replace('\r\n','').strip()
                 seminar_item['players_count'] = seminar.xpath('td[5]/text()').extract()[0].replace('\r\n','').strip()
+                seminar_item['id'] = seminar_item['sport_department'].lower()+str(i)+seminar_item['seminar'].lower()+seminar_item['period'].replace('.','').replace('-','').replace(' ','')
                 
                 # Get doPostBack id used by ASP when generating urls                 
                 seminar_item['group_url'] = self.get_dopostback_url(seminar.xpath('td[2]/a/@href').extract())
-                print(seminar_item)
-      
+                
+                
+                yield seminar_item
+                
                 viewstate = response.xpath('//*[contains(@id, "__VIEWSTATE")]/@value').extract()
-           
                 request = FormRequest.from_response(
                                 response,
                                 formname='aspnetform',                            
@@ -102,7 +91,7 @@ class NorixSpider(CrawlSpider):
                                 callback=self.parse_players,
                                 meta=seminar_item)
                 yield request                   
-            
+        
         #self.export = json.dumps(data, indent=4)
         
 
@@ -122,7 +111,7 @@ class NorixSpider(CrawlSpider):
 
         #players = response.xpath('//*[contains(@id, "linkShowMember")]/text()').extract()
         player_data = response.xpath('//table[@class="itemListTable"]/tr')
-
+        items = []
         for i, player in enumerate(player_data):
             if i != 0:
                 player_item = PlayerItem()
@@ -131,13 +120,14 @@ class NorixSpider(CrawlSpider):
                 player_item['email'] = player.xpath('td[3]/text()').extract()[0].replace('\r\n','').strip()
                 player_item['phone'] = player.xpath('td[4]/text()').extract()[0].replace('\r\n','').strip()
                 player_item['status'] = player.xpath('td[5]/text()').extract()[0].replace('\r\n','').strip()
+                player_item['seminars'] = response.meta['id']
                 
                 # Get doPostBack id used by ASP when generating urls                 
                 #club_sport['group_url'] = self.get_dopostback_url(seminar.xpath('td[2]/a/@href').extract())
                 #player_list.append(player_item)
-                print(player_item)
+                items.append(player_item)
 
-        return player_item
+        return items
         
 
 
