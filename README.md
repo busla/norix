@@ -6,5 +6,6 @@ NORI er iðkendaskráningakerfi sem haugur af íþróttafélögum á Íslandi er
 Bakvið Norix er könguló sem loggar sig inn með user og pass frá notandanum, rúllar í gegnum alla hópa og skilar tilbaka öllum iðkendum sem hann hefur aðgang að á JSON sniði.
 
 @Todo
+
 Búa til app til að skrá mætingu.
 
