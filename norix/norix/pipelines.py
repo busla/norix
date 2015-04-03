@@ -19,13 +19,14 @@ class PlayersPipeline(object):
             settings['MONGODB_SERVER'],
             settings['MONGODB_PORT']
         )
-        db = connection[settings['MONGODB_DB']]
-        self.collection = db['players']
+        self.db = connection[settings['MONGODB_DB']]
+        
         
 
     def process_item(self, item, spider):
         if not isinstance(item,PlayerItem):
             return item # return the item to let other pipeline to handle it
+        self.collection = self.db[spider.subdomain+'_'+spider.user+'_players']            
         self.collection.update({'ssn': item['ssn']}, dict(item), upsert=True)
 
         valid = True
@@ -47,13 +48,14 @@ class SeminarPipeline(object):
             settings['MONGODB_SERVER'],
             settings['MONGODB_PORT']
         )
-        db = connection[settings['MONGODB_DB']]
-        self.collection = db['seminars']
+        self.db = connection[settings['MONGODB_DB']]
+        
         
 
     def process_item(self, item, spider):
         if not isinstance(item,SeminarItem):
             return item # return the item to let other pipeline to handle it
+        self.collection = self.db[spider.subdomain+'_'+spider.user+'_seminars']
         self.collection.update({'id': item['id']}, dict(item), upsert=True)
 
         valid = True

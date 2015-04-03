@@ -17,10 +17,10 @@ USER_AGENT = "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, lik
 
 ITEM_PIPELINES = {
     'norix.pipelines.PlayersPipeline': 100,
-    'norix.pipelines.SeminarPipeline': 1000,
+    'norix.pipelines.SeminarPipeline': 200,
     }
 
 MONGODB_SERVER = "localhost"
 MONGODB_PORT = 27017
-MONGODB_DB = "norix"
+MONGODB_DB = "db"
 MONGODB_COLLECTION = "data"

@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
 import scrapy
+
 import json
 from scrapy.selector import Selector
 from scrapy.crawler import Crawler
@@ -25,11 +26,13 @@ class NorixSpider(CrawlSpider):
         #self.url = kw.get('url')
 
         self.arguments = arguments.split(',')
-        domain = self.arguments[0].strip()+'.felog'+'.is'
-        self.allowed_domains = [domain]
-        self.start_urls = ['http://'+domain+'/UsersLogin.aspx']
+        self.subdomain = self.arguments[0]
+        self.domain = self.arguments[0].strip()+'.felog'+'.is'
+        self.allowed_domains = [self.domain]
+        self.start_urls = ['http://'+self.domain+'/UsersLogin.aspx']
         self.user = self.arguments[1].strip()
         self.password = self.arguments[2].strip()
+        self.data = []
 
    
     def get_dopostback_url(self, dopostback_url):            
@@ -125,9 +128,12 @@ class NorixSpider(CrawlSpider):
                 # Get doPostBack id used by ASP when generating urls                 
                 #club_sport['group_url'] = self.get_dopostback_url(seminar.xpath('td[2]/a/@href').extract())
                 #player_list.append(player_item)
+                
+                yield player_item
                 items.append(player_item)
-
-        return items
+        #print(items)
+        self.data = items
+        #return items
         
 
 
