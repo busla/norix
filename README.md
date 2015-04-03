@@ -30,7 +30,7 @@ python app.py
 
 Nota user og pass sem þú fékkst frá félaginu þínu. Ef þú ert t.d. að logga þig inn á https://vikingur.felog.is/ þá notaru bara 'vikingur' sem club parameter.
 
-Demo : http://norix.fisapp.com:5000/players?club=vikingur&username=randver&password=laukhringur
+Demo : http://176.58.105.227:5000/players?club=vikingur&username=randver&password=laukhringur
 
 
 @Todo
