@@ -101,8 +101,11 @@ class Players(restful.Resource):
         #return self.output_json(player_list, 200)
         #return json.dumps(marshal(player_list, resource_fields))
         
-        return Response(json.dumps({'data': player_list}, default=json_util.default),
-                mimetype='application/json')        
+        response = make_response(Response(json.dumps({'data': player_list}, default=json_util.default),
+                mimetype='application/json'))
+        response.headers['Access-Control-Allow-Origin'] = "*"
+        return response
+        
         '''
         json_results = []
         for player in player_list:
