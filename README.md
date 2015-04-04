@@ -5,7 +5,9 @@ NORI er iðkendaskráningakerfi sem haugur af íþróttafélögum á Íslandi er
 
 Bakvið Norix er könguló sem loggar sig inn með user og pass frá notandanum, rúllar í gegnum alla hópa og skilar tilbaka öllum iðkendum sem hann hefur aðgang að á JSON sniði.
 
-## Setja upp á localhost (óþarfi nema að þú viljir flippa eitthvað með kóðann)
+## Setja upp á localhost
+Líklega óþarfi nema að þú viljir flippa eitthvað með kóðann sem keyrir allan bakendann.
+
 ### Nauðsynlegt
 lxml
 #### osx
@@ -25,13 +27,16 @@ python app.py
 
 ```
 
-## Fá json (til að gera eitthvað gott fönk, vonandi kladda app.)
+## Fá json
+Ef þú ætlar að fönkast eitthvað með niðurstöðurnar... búa til kladda app :-)
 Í fyrsta skipti sem notandi loggar sig inn ræsir REST-þjónustan spider sem loggar sig inn á Nóra, crawl´ar allt draslið, vistar í DB og skilar tilbaka öllum iðkendum ásamt aukaupplýsingum. Eftir það er alltaf birt iðkendur úr db.
 
-Nota user og pass sem þú fékkst frá félaginu þínu. Ef þú ert t.d. að logga þig inn á https://vikingur.felog.is/ þá notaru bara 'vikingur' sem club parameter.
+Nota user og pass sem þú fékkst frá félaginu þínu. Ef þú ert t.d. að logga þig inn á https://breidablik.felog.is/ þá notaru bara 'breidablik' sem club parameter.
 
-Demo : http://176.58.105.227:5000/players?club=vikingur&username=randver&password=laukhringur
+Urlið myndi þá líta einhvern veginn svona út:
+http://176.58.105.227:5000/players?club=breidablik&username=randver&password=laukhringur
 
+Þetta url virkar auðvitað ekki því ég heiti ekki randver og þjálfa ekki hjá Breiðablik :-P
 
 @Todo
 Búa til app til að skrá mætingu.
