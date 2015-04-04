@@ -6,16 +6,16 @@ NORI er iðkendaskráningakerfi sem haugur af íþróttafélögum á Íslandi er
 Bakvið Norix er könguló sem loggar sig inn með user og pass frá notandanum, rúllar í gegnum alla hópa og skilar tilbaka öllum iðkendum sem hann hefur aðgang að á JSON sniði.
 
 ## Setja upp á localhost
-Líklega óþarfi nema að þú viljir flippa eitthvað með kóðann sem keyrir allan bakendann.
+Líklega óþarfi nema að þú viljir flippa eitthvað með kóðann sem keyrir bakendann.
 
 ### Nauðsynlegt
-lxml
-#### osx
-Getur getur verið hausverkur að setja upp, en þú finnur út úr því.
+lxml (http://lxml.de/)
 
-#### Debian/Ubuntu/Mint
+Ef þú ert á osx þá þarftu að setja upp Xcode.
+Ef þú ert á Debian/Ubuntu/Mint, þá ætti þetta að duga.
 `$ sudo apt-get install python-dev libffi-dev libssl-dev libxml2-dev libxslt1-dev`
 
+#### Uppsetning
 ```
 git clone https://github.com/busla/norix
 cd norix/norix
