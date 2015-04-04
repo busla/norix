@@ -34,6 +34,7 @@ Ef þú ætlar að fönkast eitthvað með niðurstöðurnar... búa til kladda 
 Nota user og pass sem þú fékkst frá félaginu þínu. Ef þú ert t.d. að logga þig inn á https://breidablik.felog.is/ þá notaru bara 'breidablik' sem club parameter.
 
 Urlið myndi þá líta einhvern veginn svona út:
+
 http://176.58.105.227:5000/players?club=breidablik&username=randver&password=laukhringur
 
 Þetta url virkar auðvitað ekki því ég heiti ekki randver og þjálfa ekki hjá Breiðablik :-P
