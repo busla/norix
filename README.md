@@ -31,9 +31,9 @@ python app.py
 Ef þú ætlar að fönkast eitthvað með niðurstöðurnar... búa til kladda app :-)
 Í fyrsta skipti sem notandi loggar sig inn ræsir REST-þjónustan spider sem loggar sig inn á Nóra, crawl´ar allt draslið, vistar í DB og skilar tilbaka öllum iðkendum ásamt aukaupplýsingum. Eftir það er alltaf birt iðkendur úr db.
 
-Nota user og pass sem þú fékkst frá félaginu þínu. Ef þú ert t.d. að logga þig inn á https://breidablik.felog.is/ þá notaru bara 'breidablik' sem club parameter.
+Til að Norix geti skilað þér einhverju þarftu að nota notandanafnið og lykilorðið sem þú fékkst úthlutað frá félaginu þínu. Ef þú ert t.d. að logga þig inn á https://breidablik.felog.is/ þá notaru 'breidablik' sem club parameter og svo notandanafnið þitt og lykilorðið.
 
-Urlið myndi þá líta einhvern veginn svona út:
+Sem dæm, þá myndi urlið líta einhvern veginn svona út:
 
 http://176.58.105.227:5000/players?club=breidablik&username=randver&password=laukhringur
 
