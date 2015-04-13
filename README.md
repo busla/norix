@@ -27,7 +27,7 @@ python app.py
 
 ```
 
-## Fá json
+## Demo
 Ef þú ætlar að fönkast eitthvað með niðurstöðurnar... búa til kladda app :-)
 Í fyrsta skipti sem notandi loggar sig inn ræsir REST-þjónustan spider sem loggar sig inn á Nóra, crawl´ar allt draslið, vistar í DB og skilar tilbaka öllum iðkendum ásamt aukaupplýsingum. Eftir það er alltaf birt iðkendur úr db.
 
