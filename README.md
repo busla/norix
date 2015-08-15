@@ -39,14 +39,12 @@ http://176.58.105.227:5000/players?club=breidablik&username=randver&password=lau
 Þetta url virkar auðvitað ekki því ég heiti ekki randver og þjálfa ekki hjá Breiðablik :-P
 
 ## Vefviðmót
-Ef þú vilt fá meira fönk en bara json, þá geturu ræst einfalt vefviðmót með eftirfarandi skipun:
-`$ cd ui && grunt server`
-
-Athugaðu að þú þarft að vera með <a href="https://nodejs.org/">Node</a> uppsett.
-
-Þú þarft líka að setja club, user og pass inn hér:
+Setur club, user og pass inn hér:
 https://github.com/busla/norix/blob/master/ui/app/scripts/controllers/main.js
 
-@Todo
-Búa til app til að skrá mætingu.
+Settu upp <a href="https://nodejs.org/">Node</a>.
 
+Ræsir viðmótið með:
+`$ cd ui && grunt server`
+
+En þetta er pointless þar til ég nenni að bæta við kladda-fídus til að skrá mætingu og dúndra því tilbaka með könguló í NORA.
