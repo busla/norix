@@ -43,7 +43,8 @@ Ef þú vilt fá meira fönk en bara json, þá geturu ræst einfalt vefviðmót
 `$ cd ui && grunt server`
 
 Athugaðu að þú þarft að vera með <a href="https://nodejs.org/">Node</a> uppsett.
-
+Þú þarft líka að setja club, user og pass inn hér:
+https://github.com/busla/norix/blob/master/ui/app/scripts/controllers/main.js
 
 @Todo
 Búa til app til að skrá mætingu.
