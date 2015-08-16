@@ -34,7 +34,7 @@ Til að Norix geti skilað þér einhverju þarftu að nota notandanafnið og ly
 
 Sem dæm, þá myndi urlið líta einhvern veginn svona út:
 
-http://176.58.105.227:5000/players?club=breidablik&username=randver&password=laukhringur
+http://localhost:5000/players?club=breidablik&username=randver&password=laukhringur
 
 Þetta url virkar auðvitað ekki því ég heiti ekki randver og þjálfa ekki hjá Breiðablik :-P
 
