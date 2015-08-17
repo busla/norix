@@ -30,9 +30,11 @@ python app.py
 ## REST þjónustan
 Í fyrsta skipti sem notandi loggar sig inn ræsir REST-þjónustan könguló sem loggar sig inn á Nóra, crawl´ar allt draslið, vistar í DB og skilar tilbaka öllum iðkendum ásamt aukaupplýsingum. Eftir það eru iðkendur alltaf birtir úr db og köngulóin fær að hvíla sig.
 
-Til að Norix geti skilað þér einhverju þarftu að nota notandanafnið og lykilorðið sem þú fékkst úthlutað frá félaginu þínu. Ef þú ert þjálfari sem loggar sig inn á https://breidablik.felog.is/starfsmenn þá notaru 'breidablik' sem club parameter og svo notandanafnið þitt og lykilorðið.
+Til að Norix geti skilað þér iðkendalistum þarftu að nota notandanafnið og lykilorðið sem þú fékkst úthlutað frá félaginu þínu. Þú sérð sömu upplýsingar og venjulega í Nora. 
 
-Sem dæm, þá myndi urlið líta einhvern veginn svona út:
+Ef þú ert þjálfari sem loggar sig inn á https://breidablik.felog.is/starfsmenn þá notaru 'breidablik' sem club parameter og svo notandanafnið þitt og lykilorðið.
+
+Sem dæmi, þá myndi urlið líta einhvern veginn svona út:
 
 http://localhost:5000/players?club=breidablik&username=randver&password=laukhringur
 
