@@ -1,4 +1,4 @@
-# norix
+# NORIX
 REST vefþjónusta fyrir félagakerfið NORI
 
 <a href="http://www.greidslumidlun.is/">NORI</a> er iðkendaskráningakerfi frá fyrirtækinu Greiðslumiðlun sem haugur af íþróttafélögum á Íslandi er að nota. Norix er REST API sem skilar tilbaka öllum iðkendum sem notandinn hefur aðgang að. Norix geymir nafn, kennitölu, síma og hópinn sem iðkandinn er í. Þetta er gert til að þurfa ekki að kalla í Nora í hvert skipti sem notandinn vill sjá lista yfir iðkendur.
