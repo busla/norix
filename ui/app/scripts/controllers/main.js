@@ -10,7 +10,7 @@
 angular.module('idkendurApp')
   .controller('MainCtrl', function ($scope, Idkendur) {
   	$scope.idkendur = [];
-  	Idkendur.query({ club: '', username:'', password:'' }, function(data) {
+  	Idkendur.query({ club: 'armenningar', username:'levy', password:'tkd' }, function(data) {
       $scope.idkendur = data.data;
     });  
   });

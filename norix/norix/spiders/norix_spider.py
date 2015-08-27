@@ -4,13 +4,14 @@ import scrapy
 import json
 from scrapy.selector import Selector
 from scrapy.crawler import Crawler
-from scrapy import log, signals
+#from scrapy import log, signals
+from scrapy import signals
 from scrapy.http import HtmlResponse
-from scrapy.contrib.spiders import CrawlSpider, Rule
-from scrapy.contrib.linkextractors import LinkExtractor
+from scrapy.spiders import CrawlSpider, Rule
+from scrapy.linkextractors import LinkExtractor
 from scrapy.http import FormRequest
 from loginform import fill_login_form
-from scrapy.contrib.djangoitem import DjangoItem
+#from scrapy.contrib.djangoitem import DjangoItem
 from scrapy.http import Request
 from norix.items import *
 from twisted.internet import reactor
@@ -20,7 +21,9 @@ from urlparse import urlparse
 class NorixSpider(CrawlSpider):
 
     name = 'norix'
-   
+
+
+    '''
     def __init__(self, arguments=None, *args, **kwargs):
         super(NorixSpider, self).__init__(*args, **kwargs)
         #self.url = kw.get('url')
@@ -34,76 +37,92 @@ class NorixSpider(CrawlSpider):
         self.password = self.arguments[2].strip()
         self.data = []
 
-   
+    '''
     def get_dopostback_url(self, dopostback_url):            
         url = dopostback_url[0].split("'")
         url = url[1] 
         return url    
 
     def parse_start_url(self, response):
-        
-        args, url, method = fill_login_form(response.url, response.body, self.user, self.password)
+        self.logger.info('Logging in to:  %s', response.url)
+        self.logger.info('User:  %s', response.meta['user'])
+        self.logger.info('Password:  %s', response.meta['password'])
+        args, url, method = fill_login_form(response.url, response.body, response.meta['user'], response.meta['password'])
         return FormRequest(url, method=method, formdata=args, callback=self.logged_in)
 
 
 
 
     def logged_in(self, response):
+        
         requests = []
         club_seminar = {}
         club_seminar_list = []
-
+        
         '''
-        Login validation is missing, we need to write that very soon
+        Check if login failed. Unstable, since I´m only checking for the error text.
         '''
-        print(response.body)
-        self.log('Hi, I am in, let´s continue...  %s' % response.url)
-        
-        #groups = response.xpath('//a[contains(@id, "linkMembers")]/text()').extract()
-        seminars = response.xpath('//table[@class="itemListTable"]/tr')
-        items = []
-        for i, seminar in enumerate(seminars):
-            
-            if i != 0:
-                seminar_item = SeminarItem()
-                seminar_item['sport_department'] = seminar.xpath('td[1]/text()').extract()[0].replace('\r\n','').strip()
-                seminar_item['age_group'] = seminar.xpath('td[2]/a/text()').extract()[0].replace('\r\n','').strip()
-                seminar_item['seminar'] = seminar.xpath('td[3]/text()').extract()[0].replace('\r\n','').strip()
-                seminar_item['period'] = seminar.xpath('td[4]/text()').extract()[0].replace('\r\n','').strip()
-                seminar_item['players_count'] = seminar.xpath('td[5]/text()').extract()[0].replace('\r\n','').strip()
-                seminar_item['id'] = seminar_item['sport_department'].lower()+str(i)+seminar_item['seminar'].lower()+seminar_item['period'].replace('.','').replace('-','').replace(' ','')
-                
-                # Get doPostBack id used by ASP when generating urls                 
-                seminar_item['group_url'] = self.get_dopostback_url(seminar.xpath('td[2]/a/@href').extract())
-                
-                
-                yield seminar_item
-                
-                viewstate = response.xpath('//*[contains(@id, "__VIEWSTATE")]/@value').extract()
-                request = FormRequest.from_response(
-                                response,
-                                formname='aspnetform',                            
-                                #method='post',
-                                #url='https://umfg.felog.is/MyPage.aspx',                                
-                                formdata={
-                                '__EVENTTARGET': seminar_item['group_url'],
-                                '__EVENTARGUMENT': '',
-                                '__VIEWSTATE': viewstate[0],
-                                },
-                                dont_filter = True,
-                                callback=self.parse_players,
-                                meta=seminar_item)
-                yield request                   
-        
-        #self.export = json.dumps(data, indent=4)
-        
+        invalid_login = response.xpath('//*[@id="ctl00_ContentPlaceHolder1_panelLogin"]/table/tr[4]/td/span[1]')
+        #print(invalid_login.extract())
 
-        #self.log('Column values: %s' % data)                    
+        if not invalid_login:
+            '''
+            Login validation is missing, we need to write that very soon
+            '''
+            print(response.body)
+            #print(response.body)
+            self.logger.info('Hi, I am in, what now... ')
+            #self.log('Hi, I am in, let´s continue...  %s' % response.url)
             
-            #item['name'] = group.xpath('//td['+i+'])
+            #groups = response.xpath('//a[contains(@id, "linkMembers")]/text()').extract()
+            seminars = response.xpath('//table[@class="itemListTable"]/tr')
+            items = []
+            for i, seminar in enumerate(seminars):
+                
+                if i != 0:
+                    seminar_item = SeminarItem()
+                    seminar_item['sport_department'] = seminar.xpath('td[1]/text()').extract()[0].replace('\r\n','').strip()                
+                    seminar_item['age_group'] = seminar.xpath('td[2]/a/text()').extract()[0].replace('\r\n','').strip()
+                    seminar_item['seminar'] = seminar.xpath('td[3]/text()').extract()[0].replace('\r\n','').strip()
+                    seminar_item['period'] = seminar.xpath('td[4]/text()').extract()[0].replace('\r\n','').strip()
+                    seminar_item['players_count'] = seminar.xpath('td[5]/text()').extract()[0].replace('\r\n','').strip()
+                    seminar_item['id'] = seminar_item['sport_department'].lower()+str(i)+seminar_item['seminar'].lower()+seminar_item['period'].replace('.','').replace('-','').replace(' ','')
+                    
+                    # Get doPostBack id used by ASP when generating urls                 
+                    seminar_item['group_url'] = self.get_dopostback_url(seminar.xpath('td[2]/a/@href').extract())
+                    
+                    
+                    yield seminar_item
+                    
+                    viewstate = response.xpath('//*[contains(@id, "__VIEWSTATE")]/@value').extract()
+                    request = FormRequest.from_response(
+                                    response,
+                                    formname='aspnetform',                            
+                                    #method='post',
+                                    #url='https://umfg.felog.is/MyPage.aspx',                                
+                                    formdata={
+                                    '__EVENTTARGET': seminar_item['group_url'],
+                                    '__EVENTARGUMENT': '',
+                                    '__VIEWSTATE': viewstate[0],
+                                    },
+                                    dont_filter = True,
+                                    callback=self.parse_players,
+                                    meta=seminar_item)
+                    yield request     
 
-      
-        #request = Request(group_url[0], callback = self.parse_players)
+
+        else:
+            return              
+                
+            #self.export = json.dumps(data, indent=4)
+            
+
+            #self.log('Column values: %s' % data)                    
+                
+                #item['name'] = group.xpath('//td['+i+'])
+
+          
+            #request = Request(group_url[0], callback = self.parse_players)
             
     def parse_players(self, response):
         #self.log('Lets see all players! %s' % response.body)
