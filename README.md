@@ -51,4 +51,5 @@ Ræsir viðmótið með:
 
 Þetta gerir ekkert nema birta alla iðkendur sem þú hefur aðgang að. Ég efast um að einhver sé að nota mætingarlistana í NORA og svo næst á dasgskrá er að bæta við kladda-fídus til að skrá mætingu í vefappinu og dúndra því tilbaka með könguló í NORA.
 
-Hvað svo? Mobile-app svo þjálfarar geti tekið mætingu í símanum á æfingu?
+## Kladdi
+Kladdi tilbúinn: https://github.com/busla/norix-ui
