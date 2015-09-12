@@ -11,10 +11,10 @@ from scrapy.item import Field
 
 class SeminarItem(scrapy.Item):
     # define the fields for your item here like:
-    id = scrapy.Field()
+    seminar_id = scrapy.Field()
     sport_department = scrapy.Field()
     age_group = scrapy.Field()
-    seminar = scrapy.Field()
+    seminar_name = scrapy.Field()
     period = scrapy.Field()
     players_count = scrapy.Field()
     group_url = scrapy.Field()

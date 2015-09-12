@@ -17,6 +17,7 @@ from norix.items import *
 from twisted.internet import reactor
 import re
 from urlparse import urlparse
+import hashlib
 
 class NorixSpider(CrawlSpider):
 
@@ -43,7 +44,9 @@ class NorixSpider(CrawlSpider):
         url = url[1] 
         return url    
 
-    def parse_start_url(self, response):
+    def parse_start_url(self, response):        
+        self.user = response.meta['user']
+        self.subdomain = 'test'
         self.logger.info('Logging in to:  %s', response.url)
         self.logger.info('User:  %s', response.meta['user'])
         self.logger.info('Password:  %s', response.meta['password'])
@@ -54,7 +57,7 @@ class NorixSpider(CrawlSpider):
 
 
     def logged_in(self, response):
-        
+        self.logger.debug('Log message', extra={'response': response})
         requests = []
         club_seminar = {}
         club_seminar_list = []
@@ -69,7 +72,7 @@ class NorixSpider(CrawlSpider):
             '''
             Login validation is missing, we need to write that very soon
             '''
-            print(response.body)
+            #print(response.body)
             #print(response.body)
             self.logger.info('Hi, I am in, what now... ')
             #self.log('Hi, I am in, let´s continue...  %s' % response.url)
@@ -83,10 +86,13 @@ class NorixSpider(CrawlSpider):
                     seminar_item = SeminarItem()
                     seminar_item['sport_department'] = seminar.xpath('td[1]/text()').extract()[0].replace('\r\n','').strip()                
                     seminar_item['age_group'] = seminar.xpath('td[2]/a/text()').extract()[0].replace('\r\n','').strip()
-                    seminar_item['seminar'] = seminar.xpath('td[3]/text()').extract()[0].replace('\r\n','').strip()
+                    seminar_item['seminar_name'] = seminar.xpath('td[3]/text()').extract()[0].replace('\r\n','').strip()
                     seminar_item['period'] = seminar.xpath('td[4]/text()').extract()[0].replace('\r\n','').strip()
                     seminar_item['players_count'] = seminar.xpath('td[5]/text()').extract()[0].replace('\r\n','').strip()
-                    seminar_item['id'] = seminar_item['sport_department'].lower()+str(i)+seminar_item['seminar'].lower()+seminar_item['period'].replace('.','').replace('-','').replace(' ','')
+                    
+                    # Hash a few names to create a seminar id.
+                    seminar_item['seminar_id'] = abs(hash(seminar_item['age_group']+seminar_item['seminar_name'])) % (10 ** 8)
+                    #seminar_item['seminar_id'] = seminar_item['sport_department'].lower()+str(i)+seminar_item['seminar'].lower()+seminar_item['period'].replace('.','').replace('-','').replace(' ','')
                     
                     # Get doPostBack id used by ASP when generating urls                 
                     seminar_item['group_url'] = self.get_dopostback_url(seminar.xpath('td[2]/a/@href').extract())
@@ -142,8 +148,9 @@ class NorixSpider(CrawlSpider):
                 player_item['email'] = player.xpath('td[3]/text()').extract()[0].replace('\r\n','').strip()
                 player_item['phone'] = player.xpath('td[4]/text()').extract()[0].replace('\r\n','').strip()
                 player_item['status'] = player.xpath('td[5]/text()').extract()[0].replace('\r\n','').strip()
-                player_item['seminars'] = response.meta['id']
-                
+                #player_item['seminars'] = if player_item['seminars'] [response.meta['seminar_id']]
+                player_item['seminars'] = response.meta['seminar_id']
+                self.logger.info('player_item["seminars"]  %s', response.meta['seminar_id'])
                 # Get doPostBack id used by ASP when generating urls                 
                 #club_sport['group_url'] = self.get_dopostback_url(seminar.xpath('td[2]/a/@href').extract())
                 #player_list.append(player_item)

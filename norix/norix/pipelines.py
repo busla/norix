@@ -12,6 +12,7 @@ from scrapy.exceptions import DropItem
 from scrapy import log
 
 
+
 class PlayersPipeline(object):
 
     def __init__(self):
@@ -20,14 +21,39 @@ class PlayersPipeline(object):
             settings['MONGODB_PORT']
         )
         self.db = connection[settings['MONGODB_DB']]
+        self.collection = self.db['player_seminars__seminar_players']
+        self.collection.remove()
         
         
 
     def process_item(self, item, spider):
         if not isinstance(item,PlayerItem):
             return item # return the item to let other pipeline to handle it
-        self.collection = self.db[spider.subdomain+'_'+spider.user+'_players']            
-        self.collection.update({'ssn': item['ssn']}, dict(item), upsert=True)
+        self.collection = self.db['players']            
+        self.collection.update(
+            {
+                'ssn': item['ssn']
+            },
+            {
+                'ssn': item['ssn'],
+                'player_name': item['player_name'],
+                'email': item['email'],
+                'phone': item['phone'],
+                'status': item['status']            
+            }, 
+            upsert=True)
+
+        self.collection = self.db['player_seminars__seminar_players']        
+        self.collection.update(
+            {
+                'seminar_players': item['seminars'],
+                'player_seminars': item['ssn']
+            },
+            {
+                'seminar_players': item['seminars'],
+                'player_seminars': item['ssn']
+            },             
+            upsert=True)        
 
         valid = True
         for data in item:
@@ -55,8 +81,8 @@ class SeminarPipeline(object):
     def process_item(self, item, spider):
         if not isinstance(item,SeminarItem):
             return item # return the item to let other pipeline to handle it
-        self.collection = self.db[spider.subdomain+'_'+spider.user+'_seminars']
-        self.collection.update({'id': item['id']}, dict(item), upsert=True)
+        self.collection = self.db['seminars']
+        self.collection.update({'seminar_id': item['seminar_id']}, dict(item), upsert=True)
 
         valid = True
         for data in item:

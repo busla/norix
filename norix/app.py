@@ -106,7 +106,7 @@ class Scrape(restful.Resource):
         payload = {"spider_name":"norix", "request": {"url": nori_url, "meta": {"user": args['user'], "password": args['password']}}}
         
         r = requests.post(scrapy_url, data=json.dumps(payload))
-        print(r)
+        #print(r)
         '''
         Let´s instantiate the spider to get all class properties
         '''
