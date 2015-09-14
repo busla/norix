@@ -14,23 +14,20 @@ from scrapy import log
 
 
 class PlayersPipeline(object):
-
     def __init__(self):
-        connection = pymongo.Connection(
+        connection = pymongo.MongoClient(
             settings['MONGODB_SERVER'],
             settings['MONGODB_PORT']
         )
         self.db = connection[settings['MONGODB_DB']]
-        self.collection = self.db['player_seminars__seminar_players']
-        self.collection.remove()
-        
-        
 
     def process_item(self, item, spider):
         if not isinstance(item,PlayerItem):
             return item # return the item to let other pipeline to handle it
-        self.collection = self.db['players']            
-        self.collection.update(
+        db = self.db
+        collection = db['players']
+
+        collection.update(
             {
                 'ssn': item['ssn']
             },
@@ -43,8 +40,8 @@ class PlayersPipeline(object):
             }, 
             upsert=True)
 
-        self.collection = self.db['player_seminars__seminar_players']        
-        self.collection.update(
+        collection = db['player_seminars__seminar_players']        
+        collection.update(
             {
                 'seminar_players': item['seminars'],
                 'player_seminars': item['ssn']
@@ -70,7 +67,7 @@ class PlayersPipeline(object):
 class SeminarPipeline(object):
 
     def __init__(self):
-        connection = pymongo.Connection(
+        connection = pymongo.MongoClient(
             settings['MONGODB_SERVER'],
             settings['MONGODB_PORT']
         )
@@ -81,8 +78,9 @@ class SeminarPipeline(object):
     def process_item(self, item, spider):
         if not isinstance(item,SeminarItem):
             return item # return the item to let other pipeline to handle it
-        self.collection = self.db['seminars']
-        self.collection.update({'seminar_id': item['seminar_id']}, dict(item), upsert=True)
+        db = self.db
+        collection = db['seminars']
+        collection.update({'seminar_id': item['seminar_id']}, dict(item), upsert=True)
 
         valid = True
         for data in item:

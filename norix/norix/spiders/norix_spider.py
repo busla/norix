@@ -46,7 +46,7 @@ class NorixSpider(CrawlSpider):
 
     def parse_start_url(self, response):        
         self.user = response.meta['user']
-        self.subdomain = 'test'
+        self.club = response.meta['club']
         self.logger.info('Logging in to:  %s', response.url)
         self.logger.info('User:  %s', response.meta['user'])
         self.logger.info('Password:  %s', response.meta['password'])
@@ -91,7 +91,7 @@ class NorixSpider(CrawlSpider):
                     seminar_item['players_count'] = seminar.xpath('td[5]/text()').extract()[0].replace('\r\n','').strip()
                     
                     # Hash a few names to create a seminar id.
-                    seminar_item['seminar_id'] = abs(hash(seminar_item['age_group']+seminar_item['seminar_name'])) % (10 ** 8)
+                    seminar_item['seminar_id'] = abs(hash(self.club+seminar_item['sport_department']+seminar_item['age_group']+seminar_item['seminar_name'])) % (10 ** 8)
                     #seminar_item['seminar_id'] = seminar_item['sport_department'].lower()+str(i)+seminar_item['seminar'].lower()+seminar_item['period'].replace('.','').replace('-','').replace(' ','')
                     
                     # Get doPostBack id used by ASP when generating urls                 
