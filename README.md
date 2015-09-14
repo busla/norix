@@ -7,7 +7,7 @@ The spider is written with <a href="http://scrapy.org/">Scrapy</a> and managed b
 ## Install MongoDB
 <a href="http://docs.mongodb.org/manual/installation/">Install MongoDB</a>
 
-### IMPORTANT
+### OS dependencies
 The spider depends on lxml (http://lxml.de/), which in turn depends on the GCC compiler library.
 
 #### OSX
