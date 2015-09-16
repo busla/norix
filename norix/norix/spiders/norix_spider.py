@@ -4,6 +4,7 @@ import scrapy
 import json
 from scrapy.selector import Selector
 from scrapy.crawler import Crawler
+from scrapy.conf import settings
 #from scrapy import log, signals
 from scrapy import signals
 from scrapy.http import HtmlResponse
@@ -18,6 +19,9 @@ from twisted.internet import reactor
 import re
 from urlparse import urlparse
 import hashlib
+import bcrypt
+import pymongo
+from pymongo import ReturnDocument
 
 class NorixSpider(CrawlSpider):
 
@@ -47,6 +51,7 @@ class NorixSpider(CrawlSpider):
     def parse_start_url(self, response):        
         self.user = response.meta['user']
         self.club = response.meta['club']
+        self.password = response.meta['password']
         self.logger.info('Logging in to:  %s', response.url)
         self.logger.info('User:  %s', response.meta['user'])
         self.logger.info('Password:  %s', response.meta['password'])
@@ -69,12 +74,37 @@ class NorixSpider(CrawlSpider):
         #print(invalid_login.extract())
 
         if not invalid_login:
+            connection = pymongo.MongoClient(
+                settings['MONGODB_SERVER'],
+                settings['MONGODB_PORT']
+            )
+            db = connection[settings['MONGODB_DB']]
+
             '''
             Login validation is missing, we need to write that very soon
             '''
             #print(response.body)
             #print(response.body)
             self.logger.info('Hi, I am in, what now... ')
+            password = self.password.encode('utf-8')
+
+            #Changing the prefix since the node bcrypt package uses 2a, not 2b.
+            hashed = bcrypt.hashpw(password, bcrypt.gensalt(10, prefix=b"2a"))            
+            user_db = db['users']
+            self.user_obj = user_db.find_one_and_update(
+                {
+                    'username': self.user,                    
+                    'club': self.club,
+                },
+
+                {'$set': {
+                    'username': self.user,                    
+                    'club': self.club,                
+                    'encryptedPassword': hashed,
+                    }                
+                },  
+                return_document=ReturnDocument.AFTER,       
+                upsert=True) 
             #self.log('Hi, I am in, let´s continue...  %s' % response.url)
             
             #groups = response.xpath('//a[contains(@id, "linkMembers")]/text()').extract()
@@ -118,17 +148,7 @@ class NorixSpider(CrawlSpider):
 
 
         else:
-            return              
-                
-            #self.export = json.dumps(data, indent=4)
-            
-
-            #self.log('Column values: %s' % data)                    
-                
-                #item['name'] = group.xpath('//td['+i+'])
-
-          
-            #request = Request(group_url[0], callback = self.parse_players)
+            return          
             
     def parse_players(self, response):
         #self.log('Lets see all players! %s' % response.body)
@@ -148,39 +168,32 @@ class NorixSpider(CrawlSpider):
                 player_item['email'] = player.xpath('td[3]/text()').extract()[0].replace('\r\n','').strip()
                 player_item['phone'] = player.xpath('td[4]/text()').extract()[0].replace('\r\n','').strip()
                 player_item['status'] = player.xpath('td[5]/text()').extract()[0].replace('\r\n','').strip()
-                #player_item['seminars'] = if player_item['seminars'] [response.meta['seminar_id']]
                 player_item['seminars'] = response.meta['seminar_id']
-                self.logger.info('player_item["seminars"]  %s', response.meta['seminar_id'])
-                # Get doPostBack id used by ASP when generating urls                 
-                #club_sport['group_url'] = self.get_dopostback_url(seminar.xpath('td[2]/a/@href').extract())
-                #player_list.append(player_item)
+            
                 
                 yield player_item
                 items.append(player_item)
-        #print(items)
+        
         self.data = items
-        #return items
+        
         
 
+'''
+# Started the crawl to player detail page but let´s do that later
+
+for item in response.xpath('//*[contains(@id, "linkShowMember")]'):
+    crazy_url = item.xpath('//a/@href').extract()
+    for crazy in crazy_url:
+        print(crazy)
+    #player_url = crazy_url[0].split(',')[0].split('"')[1].replace('"','')
+    #print(player_url)
+#print(response.xpath('//*[contains(@id, "linkShowMember")]/a/@id').extract())
+#player_urls = self.get_dopostback_url(response.xpath('//*[contains(@id, "linkShowMember")]/a/@href').extract())
+#print(player_urls)
+
+#for player in player_names:
 
 
 
-        '''
-        # Started the crawl to player detail page but let´s do that later
-
-        for item in response.xpath('//*[contains(@id, "linkShowMember")]'):
-            crazy_url = item.xpath('//a/@href').extract()
-            for crazy in crazy_url:
-                print(crazy)
-            #player_url = crazy_url[0].split(',')[0].split('"')[1].replace('"','')
-            #print(player_url)
-        #print(response.xpath('//*[contains(@id, "linkShowMember")]/a/@id').extract())
-        #player_urls = self.get_dopostback_url(response.xpath('//*[contains(@id, "linkShowMember")]/a/@href').extract())
-        #print(player_urls)
-        
-        #for player in player_names:
-
-
-
-        return
-        '''
+return
+'''
