@@ -11,6 +11,7 @@ from scrapy.http import HtmlResponse
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
 from scrapy.http import FormRequest
+from scrapy.exceptions import CloseSpider
 from loginform import fill_login_form
 #from scrapy.contrib.djangoitem import DjangoItem
 from scrapy.http import Request
@@ -22,6 +23,7 @@ import hashlib
 import bcrypt
 import pymongo
 from pymongo import ReturnDocument
+import socket
 
 class NorixSpider(CrawlSpider):
 
@@ -43,20 +45,35 @@ class NorixSpider(CrawlSpider):
         self.data = []
 
     '''
+    def url_exists(self, hostname):
+        try:
+            self.logger.info(hostname)
+            socket.gethostbyname(hostname)
+            
+            return True
+        except socket.error as e:
+            self.logger.info(e)
+            return False 
+
     def get_dopostback_url(self, dopostback_url):            
         url = dopostback_url[0].split("'")
         url = url[1] 
         return url    
 
-    def parse_start_url(self, response):        
+    def parse_start_url(self, response):    
+        
         self.user = response.meta['user']
         self.club = response.meta['club']
         self.password = response.meta['password']
         self.logger.info('Logging in to:  %s', response.url)
-        self.logger.info('User:  %s', response.meta['user'])
-        self.logger.info('Password:  %s', response.meta['password'])
-        args, url, method = fill_login_form(response.url, response.body, response.meta['user'], response.meta['password'])
-        return FormRequest(url, method=method, formdata=args, callback=self.logged_in)
+
+        if self.url_exists(response.url.split('/')[2]):
+            self.logger.info('User:  %s', response.meta['user'])
+            self.logger.info('Password:  %s', response.meta['password'])
+            args, url, method = fill_login_form(response.url, response.body, response.meta['user'], response.meta['password'])
+            return FormRequest(url, method=method, formdata=args, callback=self.logged_in)
+        else:
+            raise CloseSpider('Url not found :-(')
 
 
 
@@ -79,7 +96,7 @@ class NorixSpider(CrawlSpider):
                 settings['MONGODB_PORT']
             )
             db = connection[settings['MONGODB_DB']]
-
+            
             '''
             Login validation is missing, we need to write that very soon
             '''
@@ -142,6 +159,7 @@ class NorixSpider(CrawlSpider):
                                     '__VIEWSTATE': viewstate[0],
                                     },
                                     dont_filter = True,
+                                    dont_click = True,
                                     callback=self.parse_players,
                                     meta=seminar_item)
                     yield request     

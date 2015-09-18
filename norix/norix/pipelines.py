@@ -41,7 +41,7 @@ class PlayersPipeline(object):
                 'status': item['status']            
             }, 
             upsert=True)
-
+        
         collection = db['player_seminars__seminar_players']        
         collection.update(
             {
@@ -91,12 +91,12 @@ class SeminarPipeline(object):
         #spider.logger.info(spider.user_obj['_id'])
         
         user_seminars.update({
-            'user': spider.user_obj['_id'],            
-            'seminar': item['seminar_id']
+            'user_user_has_seminars': spider.user_obj['_id'],            
+            'seminar_seminar_has_users': item['seminar_id']
             },
             {
-            'user': spider.user_obj['_id'],
-            'seminar': item['seminar_id']
+            'user_user_has_seminars': spider.user_obj['_id'],
+            'seminar_seminar_has_users': item['seminar_id']
             },                        
             upsert=True) 
         
