@@ -77,6 +77,7 @@ class NorixSpider(CrawlSpider):
         for seminar in seminars:
             self.logger.info('SEMINAR: %s', seminar)
         player_seminar_db.remove({'seminar_players': {'$in': seminars}})
+        #player_seminar_db.remove()
 
     def add_user(self):            
             
@@ -105,8 +106,7 @@ class NorixSpider(CrawlSpider):
                 },  
                 return_document=ReturnDocument.AFTER,       
                 upsert=True) 
-
-            self.delete_player_seminar_associations(self.user_obj)
+            return self.user_obj            
 
     def logged_in(self, response):
         self.logger.debug('Log message', extra={'response': response})
@@ -124,7 +124,8 @@ class NorixSpider(CrawlSpider):
             '''
             Add the Nori user to our db
             '''            
-            self.add_user()
+            user = self.add_user()
+            self.delete_player_seminar_associations(user)
 
 
             
@@ -190,7 +191,7 @@ class NorixSpider(CrawlSpider):
                 player_item['phone'] = player.xpath('td[4]/text()').extract()[0].replace('\r\n','').strip()
                 player_item['status'] = player.xpath('td[5]/text()').extract()[0].replace('\r\n','').strip()
                 player_item['seminars'] = response.meta['seminar_id']
-            
+                self.logger.debug('Player: %s added to seminar: %s' % (player_item['player_name'], response.meta['seminar_name']))
                 
                 yield player_item
                 items.append(player_item)

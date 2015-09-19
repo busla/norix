@@ -27,9 +27,10 @@ class PlayersPipeline(object):
         if not isinstance(item,PlayerItem):
             return item # return the item to let other pipeline to handle it
         db = self.db
-        collection = db['players']
+        players = db['players']
+        player_seminars = db['player_seminars__seminar_players']
 
-        collection.update(
+        players.update(
             {
                 'ssn': item['ssn']
             },
@@ -42,17 +43,12 @@ class PlayersPipeline(object):
             }, 
             upsert=True)
         
-        collection = db['player_seminars__seminar_players']        
-        collection.update(
+        
+        player_seminars.insert_one(
             {
                 'seminar_players': item['seminars'],
                 'player_seminars': item['ssn']
-            },
-            {
-                'seminar_players': item['seminars'],
-                'player_seminars': item['ssn']
-            },             
-            upsert=True)        
+            })        
 
         valid = True
         for data in item:
@@ -62,8 +58,8 @@ class PlayersPipeline(object):
         if valid:
             #self.collection.insert(dict(item))
             #self.collection.findAndModify(dict(item), {'upsert':'true'});
-            log.msg("Player added to collection",
-                    level=log.DEBUG, spider=spider)
+            spider.logger.info("Player %s added to collection", item['player_name'])
+
         return item
 
 class SeminarPipeline(object):
@@ -79,14 +75,13 @@ class SeminarPipeline(object):
         if not isinstance(item,SeminarItem):
             return item # return the item to let other pipeline to handle it
         db = self.db
-        collection = db['seminars']
-        collection.update({'seminar_id': item['seminar_id']}, dict(item), upsert=True)
-        
-        user_db = db['users']
+        seminar = db['seminars']
+        #user_db = db['users']
         user_seminars = db['seminar_seminar_has_users__user_user_has_seminars']        
+
+        seminar.update({'seminar_id': item['seminar_id']}, dict(item), upsert=True)
         
         #find_user = user_db.find({'username': spider.user, 'club': spider.club})
-        
         
         #spider.logger.info(spider.user_obj['_id'])
         
@@ -107,6 +102,6 @@ class SeminarPipeline(object):
                 valid = False
                 raise DropItem("Missing {0}!".format(data))
         if valid:
-            spider.logger.debug("Seminar added to collection")
+            spider.logger.info("Seminar %s added to collection", item['seminar_name'])
             
         return item
