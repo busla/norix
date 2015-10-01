@@ -1,0 +1,484 @@
+2015-09-17 09:21:19+0000 [scrapy] DEBUG: Redirecting (303) to <GET https://armenningar.felog.is/UsersLogin.aspx> from <GET http://armenningar.felog.is/UsersLogin.aspx>
+2015-09-17 09:21:19+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/UsersLogin.aspx> (referer: None)
+2015-09-17 09:21:19+0000 [norix] INFO: Logging in to:  https://armenningar.felog.is/UsersLogin.aspx
+2015-09-17 09:21:19+0000 [norix] INFO: User:  levy
+2015-09-17 09:21:19+0000 [norix] INFO: Password:  swodniW
+2015-09-17 09:21:20+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://armenningar.felog.is/MyPage.aspx> from <POST https://armenningar.felog.is/UsersLogin.aspx>
+2015-09-17 09:21:20+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/MyPage.aspx> (referer: https://armenningar.felog.is/UsersLogin.aspx)
+2015-09-17 09:21:20+0000 [norix] DEBUG: Log message
+2015-09-17 09:21:20+0000 [norix] INFO: Hi, I am in, what now... 
+2015-09-17 09:21:20+0000 [norix] DEBUG: Seminar added to collection
+2015-09-17 09:21:20+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'age_group': u'Kr\xedli KK og KVK',
+ 'group_url': u'ctl00$ContentPlaceHolder1$repeaterUserAccess$ctl01$LinkButton1',
+ 'period': u'05.09.2015 - 07.11.2015',
+ 'players_count': u'14',
+ 'seminar_id': 29335990,
+ 'seminar_name': u'Laugardagar kl. 10:00',
+ 'sport_department': u'Taekwondodeild'}
+2015-09-17 09:21:20+0000 [norix] DEBUG: Seminar added to collection
+2015-09-17 09:21:20+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'age_group': u'Yngri byrjendur KK og KVK',
+ 'group_url': u'ctl00$ContentPlaceHolder1$repeaterUserAccess$ctl02$LinkButton1',
+ 'period': u'26.08.2015 - 18.12.2015',
+ 'players_count': u'9',
+ 'seminar_id': 13983856,
+ 'seminar_name': u'Gulir',
+ 'sport_department': u'Taekwondodeild'}
+2015-09-17 09:21:20+0000 [norix] DEBUG: Seminar added to collection
+2015-09-17 09:21:20+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'age_group': u'Eldri byrjendur KK og KVK',
+ 'group_url': u'ctl00$ContentPlaceHolder1$repeaterUserAccess$ctl03$LinkButton1',
+ 'period': u'26.08.2015 - 18.12.2015',
+ 'players_count': u'2',
+ 'seminar_id': 19628440,
+ 'seminar_name': u'Orange',
+ 'sport_department': u'Taekwondodeild'}
+2015-09-17 09:21:20+0000 [norix] DEBUG: Seminar added to collection
+2015-09-17 09:21:20+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'age_group': u'Yngri framhaldsh\xf3pur KK og KVK',
+ 'group_url': u'ctl00$ContentPlaceHolder1$repeaterUserAccess$ctl04$LinkButton1',
+ 'period': u'26.08.2015 - 18.12.2015',
+ 'players_count': u'5',
+ 'seminar_id': 15004629,
+ 'seminar_name': u'Bl\xe1ir',
+ 'sport_department': u'Taekwondodeild'}
+2015-09-17 09:21:20+0000 [norix] DEBUG: Seminar added to collection
+2015-09-17 09:21:20+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'age_group': u'Drekar KK og KVK',
+ 'group_url': u'ctl00$ContentPlaceHolder1$repeaterUserAccess$ctl05$LinkButton1',
+ 'period': u'26.08.2015 - 18.12.2015',
+ 'players_count': u'10',
+ 'seminar_id': 8690972,
+ 'seminar_name': u'Byrjendur og lengra komnir 13 \xe1ra og eldri',
+ 'sport_department': u'Taekwondodeild'}
+2015-09-17 09:21:20+0000 [norix] DEBUG: Seminar added to collection
+2015-09-17 09:21:20+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'age_group': u'Framhaldsh\xf3pur KK og KVK',
+ 'group_url': u'ctl00$ContentPlaceHolder1$repeaterUserAccess$ctl06$LinkButton1',
+ 'period': u'26.08.2015 - 18.12.2015',
+ 'players_count': u'15',
+ 'seminar_id': 28828079,
+ 'seminar_name': u'Rau\xf0ir',
+ 'sport_department': u'Taekwondodeild'}
+2015-09-17 09:21:20+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://armenningar.felog.is/ShowGroupMembers.aspx> from <POST https://armenningar.felog.is/MyPage.aspx>
+2015-09-17 09:21:20+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://armenningar.felog.is/ShowGroupMembers.aspx> from <POST https://armenningar.felog.is/MyPage.aspx>
+2015-09-17 09:21:20+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+2015-09-17 09:21:20+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'padresmurfa@gmail.com;runaeinars@hotmail.com',
+ 'phone': u'8941929',
+ 'player_name': u'Einar P\xe1ll Dav\xed\xf0sson',
+ 'seminars': 13983856,
+ 'ssn': u'071207-3230',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:20+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'elmar@hi.is',
+ 'phone': u'8939385',
+ 'player_name': u'J\xfal\xedan R\xedkar\xf0ur Elmarsson',
+ 'seminars': 13983856,
+ 'ssn': u'170908-3250',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:20+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'kataosk@gmail.com',
+ 'phone': u'6699563',
+ 'player_name': u'Logi Sn\xe6r Gu\xf0mundsson',
+ 'seminars': 13983856,
+ 'ssn': u'230508-2160',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:20+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'bjorn@stopp.is',
+ 'phone': u'6183575',
+ 'player_name': u'Ninna \xde\xf3rey Bj\xf6rnsd\xf3ttir',
+ 'seminars': 13983856,
+ 'ssn': u'280708-3560',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:20+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'Birnadiso@hotmail.com',
+ 'phone': u'8935929',
+ 'player_name': u'\xd3lafur P\xe9tur \xde\xf3rj\xf3nsson',
+ 'seminars': 13983856,
+ 'ssn': u'110308-3020',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'tristanasol@gmail.com',
+ 'phone': u'8660192',
+ 'player_name': u'Tristana S\xf3l Kristj\xe1nsd\xf3ttir',
+ 'seminars': 13983856,
+ 'ssn': u'130506-2750',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'',
+ 'phone': u'',
+ 'player_name': u'Tupac T\xfdr Nunez Kvaran',
+ 'seminars': 13983856,
+ 'ssn': u'120609-3350',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'vala.sig@gmail.com',
+ 'phone': u'8422945',
+ 'player_name': u'\xdalfar Heimisson',
+ 'seminars': 13983856,
+ 'ssn': u'030207-2110',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'hallasigga@gmail.com;photononni@gmail.com',
+ 'phone': u'5510617',
+ 'player_name': u'\xder\xf6stur \xde\xf3r J\xf3nsson',
+ 'seminars': 13983856,
+ 'ssn': u'270209-2380',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://armenningar.felog.is/ShowGroupMembers.aspx> from <POST https://armenningar.felog.is/MyPage.aspx>
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'josno@simnet.is',
+ 'phone': u'8970739',
+ 'player_name': u'Snorri Esek\xedel J\xf3hannesson',
+ 'seminars': 15004629,
+ 'ssn': u'050904-2290',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'dabbsa9@gmail.com',
+ 'phone': u'8209529',
+ 'player_name': u'Sunna Lind Ingvarsd\xf3ttir',
+ 'seminars': 15004629,
+ 'ssn': u'210107-2580',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'annadora78@hotmail.com',
+ 'phone': u'8989852',
+ 'player_name': u'Sverrir \xde\xf3r Vilhj\xe1lmsson',
+ 'seminars': 15004629,
+ 'ssn': u'111005-3030',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'kristin.vilhjalmsdottir@reykjavik.is',
+ 'phone': u'5610065',
+ 'player_name': u'Vilhj\xe1lmur \xde\xf3r Olsen',
+ 'seminars': 15004629,
+ 'ssn': u'070105-2760',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'kvaranita@hotmail.com',
+ 'phone': u'5532176',
+ 'player_name': u'\xc6var Nunez Kvaran',
+ 'seminars': 15004629,
+ 'ssn': u'171204-2160',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'bernharth@gmail.com',
+ 'phone': u'6990119',
+ 'player_name': u'A\xf0alsteinn Logi Bernhar\xf0sson',
+ 'seminars': 29335990,
+ 'ssn': u'290411-2460',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'',
+ 'phone': u'',
+ 'player_name': u'\xc1r\xfan Emma J\xf3ns Helgud\xf3ttir',
+ 'seminars': 29335990,
+ 'ssn': u'290311-4110',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'hjodda29@hotmail.com',
+ 'phone': u'8680623',
+ 'player_name': u'Breki Hrafn Helgason',
+ 'seminars': 29335990,
+ 'ssn': u'120212-2140',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'',
+ 'phone': u'',
+ 'player_name': u'Egill Hugr\xfanarson Gu\xf0j\xf3nsson',
+ 'seminars': 29335990,
+ 'ssn': u'290212-2000',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'Elsarg@simnet.is',
+ 'phone': u'8680657',
+ 'player_name': u'Erik Bjarki Juto',
+ 'seminars': 29335990,
+ 'ssn': u'260511-2460',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'audurkvaran@gmail.com',
+ 'phone': u'6941056',
+ 'player_name': u'Erpur \xde\xf3r\xf0arson',
+ 'seminars': 29335990,
+ 'ssn': u'250612-3030',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'audurkvaran@gmail.com',
+ 'phone': u'6941056',
+ 'player_name': u'Grettir \xde\xf3r\xf0arson',
+ 'seminars': 29335990,
+ 'ssn': u'191010-2560',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'sbg@logreglan.is',
+ 'phone': u'3548466714',
+ 'player_name': u'Gu\xf0j\xf3n Ingi Sk\xfalason',
+ 'seminars': 29335990,
+ 'ssn': u'310311-2510',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'',
+ 'phone': u'',
+ 'player_name': u'Heba Hallsd\xf3ttir',
+ 'seminars': 29335990,
+ 'ssn': u'160112-2120',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'rii@eimskip.is',
+ 'phone': u'8257676',
+ 'player_name': u'H\xf3lmar Loki Ragnarsson',
+ 'seminars': 29335990,
+ 'ssn': u'031011-2800',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'katapalsdottir@gmail.com',
+ 'phone': u'8664488',
+ 'player_name': u'J\xf3n \xd3ttar J\xf3nsson',
+ 'seminars': 29335990,
+ 'ssn': u'210612-3350',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'jovannaiceland@gmail.com',
+ 'phone': u'4546470',
+ 'player_name': u'Katla Bj\xf6rk Claas Arnarsd\xf3ttir',
+ 'seminars': 29335990,
+ 'ssn': u'300911-2420',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'ingaind@gmail.com',
+ 'phone': u'6991031',
+ 'player_name': u'Loki Brynjarsson',
+ 'seminars': 29335990,
+ 'ssn': u'190211-2900',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'Thorunnbald@gmail.com',
+ 'phone': u'8941975',
+ 'player_name': u'M\xf3ei\xf0ur Arnarsd\xf3ttir',
+ 'seminars': 29335990,
+ 'ssn': u'160910-2160',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://armenningar.felog.is/ShowGroupMembers.aspx> from <POST https://armenningar.felog.is/MyPage.aspx>
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'annadora78@hotmail.com',
+ 'phone': u'5349852',
+ 'player_name': u'Anna D\xf3ra Sverrisd\xf3ttir',
+ 'seminars': 8690972,
+ 'ssn': u'060878-5289',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'dabbsa9@gmail.com',
+ 'phone': u'8209529',
+ 'player_name': u'Dagbj\xf6rt R\xfanarsd\xf3ttir',
+ 'seminars': 8690972,
+ 'ssn': u'260979-5829',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'padresmurfa@gmail.com',
+ 'phone': u'5531929',
+ 'player_name': u'Dav\xed\xf0 Hermann Brandt',
+ 'seminars': 8690972,
+ 'ssn': u'170472-6169',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'hie@mi.is',
+ 'phone': u'8252513',
+ 'player_name': u'H\xf3lmfr\xed\xf0ur Inga Ey\xfe\xf3rsd\xf3ttir',
+ 'seminars': 8690972,
+ 'ssn': u'180771-5739',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'adalheidur.bjork.olgudottir@reykjavik.is',
+ 'phone': u'8430909',
+ 'player_name': u'\xcdsak Magn\xfasson',
+ 'seminars': 8690972,
+ 'ssn': u'281101-2260',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'gylfi75@hotmail.com',
+ 'phone': u'7798088',
+ 'player_name': u'J\xf6kull Orri Gylfason',
+ 'seminars': 8690972,
+ 'ssn': u'281002-4490',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'kristin.vilhjalmsdottir@reykjavik.is',
+ 'phone': u'5610065',
+ 'player_name': u'Krist\xedn Vilhj\xe1lmsd\xf3ttir',
+ 'seminars': 8690972,
+ 'ssn': u'300567-5849',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'zenpandan@gmail.com',
+ 'phone': u'6699964',
+ 'player_name': u'Kristmundur Dan\xedelsson',
+ 'seminars': 8690972,
+ 'ssn': u'050683-3389',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'rosalarusdottir@gmail.com',
+ 'phone': u'6978414',
+ 'player_name': u'R\xf3sa L\xe1rusd\xf3ttir',
+ 'seminars': 8690972,
+ 'ssn': u'040477-5789',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:21+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'vilhjalmur.vilhjalmsson@nyherji.is',
+ 'phone': u'8434305',
+ 'player_name': u'Vilhj\xe1lmur \xde\xf3r Vilhj\xe1lmsson',
+ 'seminars': 8690972,
+ 'ssn': u'180275-4019',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:22+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://armenningar.felog.is/ShowGroupMembers.aspx> from <POST https://armenningar.felog.is/MyPage.aspx>
+2015-09-17 09:21:22+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+2015-09-17 09:21:22+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'',
+ 'phone': u'',
+ 'player_name': u'Isad\xf3ra Bjarkard\xf3ttir Barney',
+ 'seminars': 19628440,
+ 'ssn': u'031002-3380',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:22+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'rosasturlu@hotmail.com',
+ 'phone': u'8686029',
+ 'player_name': u'Styrmir Hrafn Steinunnarson',
+ 'seminars': 19628440,
+ 'ssn': u'270704-2120',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:22+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://armenningar.felog.is/ShowGroupMembers.aspx> from <POST https://armenningar.felog.is/MyPage.aspx>
+2015-09-17 09:21:23+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+2015-09-17 09:21:23+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'antje.muller@gmail.com',
+ 'phone': u'8648499',
+ 'player_name': u'Antje Muller',
+ 'seminars': 28828079,
+ 'ssn': u'310372-2349',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:23+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'',
+ 'phone': u'',
+ 'player_name': u'\xc1st\xfe\xf3r Arnar Bragason',
+ 'seminars': 28828079,
+ 'ssn': u'080893-2139',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:23+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'gudridur.hrund.helgadottir@mk.is',
+ 'phone': u'8659973',
+ 'player_name': u'Ger\xf0ur Eva Halld\xf3rsd\xf3ttir',
+ 'seminars': 28828079,
+ 'ssn': u'020701-3070',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:23+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'',
+ 'phone': u'',
+ 'player_name': u'Gulleik L\xf6vskar',
+ 'seminars': 28828079,
+ 'ssn': u'290664-2419',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:23+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'halldor@grettir.net',
+ 'phone': u'8209375',
+ 'player_name': u'Halld\xf3r Freyr Grettisson',
+ 'seminars': 28828079,
+ 'ssn': u'300402-3640',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:23+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'bryndis_p@hotmail.com',
+ 'phone': u'8443499',
+ 'player_name': u'H\xe1kon Jan Nor\xf0fj\xf6r\xf0',
+ 'seminars': 28828079,
+ 'ssn': u'050902-4390',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:23+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'heidastora@gmail.com',
+ 'phone': u'5671760',
+ 'player_name': u'Hei\xf0r\xfan \xdeorvaldsd\xf3ttir',
+ 'seminars': 28828079,
+ 'ssn': u'090889-2069',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:23+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'irunn@isb.is',
+ 'phone': u'8444249',
+ 'player_name': u'\xcdrunn Ketilsd\xf3ttir',
+ 'seminars': 28828079,
+ 'ssn': u'020869-3569',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:23+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'levito@gmail.com',
+ 'phone': u'7798217',
+ 'player_name': u'J\xf3n Gu\xf0mundarson Selmuson',
+ 'seminars': 28828079,
+ 'ssn': u'190881-5989',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:23+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'annadora78@hotmail.com',
+ 'phone': u'5349852',
+ 'player_name': u'Krist\xedn Mar\xeda Vilhj\xe1lmsd\xf3ttir',
+ 'seminars': 28828079,
+ 'ssn': u'100799-3249',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:23+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'',
+ 'phone': u'',
+ 'player_name': u'Meisam Rafiei',
+ 'seminars': 28828079,
+ 'ssn': u'210386-3869',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:23+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'smj9@hi.is',
+ 'phone': u'8674359',
+ 'player_name': u'Sandra Mj\xf6ll J\xf3nsd\xf3ttir',
+ 'seminars': 28828079,
+ 'ssn': u'191188-2849',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:23+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'sol@javerk.is',
+ 'phone': u'8601706',
+ 'player_name': u'Sigurj\xf3n \xd3lafsson',
+ 'seminars': 28828079,
+ 'ssn': u'061169-3859',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:23+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'flosip@internet.is',
+ 'phone': u'6992828',
+ 'player_name': u'Viktor Sn\xe6r Flosason',
+ 'seminars': 28828079,
+ 'ssn': u'230502-2260',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:23+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'grettir.einarsson@gmail.com',
+ 'phone': u'8209375',
+ 'player_name': u'\xde\xf3rarinn Grettir Einarsson',
+ 'seminars': 28828079,
+ 'ssn': u'190575-4629',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 09:21:23+0000 [scrapy] INFO: Closing spider (finished)
+2015-09-17 09:21:23+0000 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 24027,
+ 'downloader/request_count': 16,
+ 'downloader/request_method_count/GET': 9,
+ 'downloader/request_method_count/POST': 7,
+ 'downloader/response_bytes': 342541,
+ 'downloader/response_count': 16,
+ 'downloader/response_status_count/200': 8,
+ 'downloader/response_status_count/302': 7,
+ 'downloader/response_status_count/303': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2015, 9, 17, 9, 21, 23, 346726),
+ 'item_scraped_count': 61,
+ 'log_count/DEBUG': 139,
+ 'log_count/INFO': 11,
+ 'request_depth_max': 2,
+ 'response_received_count': 8,
+ 'scheduler/dequeued': 16,
+ 'scheduler/dequeued/memory': 16,
+ 'scheduler/enqueued': 16,
+ 'scheduler/enqueued/memory': 16,
+ 'start_time': datetime.datetime(2015, 9, 17, 9, 21, 19, 677805)}
+2015-09-17 09:21:23+0000 [scrapy] INFO: Spider closed (finished)

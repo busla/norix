@@ -1,0 +1,23 @@
+2015-09-16 10:36:11+0000 [scrapy] DEBUG: Redirecting (303) to <GET https://undefined.felog.is/UsersLogin.aspx> from <GET http://undefined.felog.is/UsersLogin.aspx>
+2015-09-16 10:36:11+0000 [scrapy] DEBUG: Crawled (404) <GET https://undefined.felog.is/UsersLogin.aspx> (referer: None)
+2015-09-16 10:36:11+0000 [scrapy] DEBUG: Ignoring response <404 https://undefined.felog.is/UsersLogin.aspx>: HTTP status code is not handled or not allowed
+2015-09-16 10:36:11+0000 [scrapy] INFO: Closing spider (finished)
+2015-09-16 10:36:11+0000 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 612,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 2088,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/303': 1,
+ 'downloader/response_status_count/404': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2015, 9, 16, 10, 36, 11, 385773),
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 7,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 2,
+ 'scheduler/dequeued/memory': 2,
+ 'scheduler/enqueued': 2,
+ 'scheduler/enqueued/memory': 2,
+ 'start_time': datetime.datetime(2015, 9, 16, 10, 36, 11, 185405)}
+2015-09-16 10:36:11+0000 [scrapy] INFO: Spider closed (finished)

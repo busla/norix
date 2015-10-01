@@ -1,0 +1,296 @@
+2015-09-17 21:57:55+0000 [scrapy] DEBUG: Redirecting (303) to <GET https://armenningar.felog.is/UsersLogin.aspx> from <GET http://armenningar.felog.is/UsersLogin.aspx>
+2015-09-17 21:58:55+0000 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2015-09-17 21:59:25+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/UsersLogin.aspx> (referer: None)
+2015-09-17 21:59:25+0000 [norix] INFO: Logging in to:  https://armenningar.felog.is/UsersLogin.aspx
+2015-09-17 21:59:25+0000 [norix] INFO: User:  levy
+2015-09-17 21:59:25+0000 [norix] INFO: Password:  swodniW
+2015-09-17 21:59:55+0000 [scrapy] INFO: Crawled 1 pages (at 1 pages/min), scraped 0 items (at 0 items/min)
+2015-09-17 22:00:55+0000 [scrapy] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2015-09-17 22:01:55+0000 [scrapy] INFO: Crawled 1 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2015-09-17 22:01:55+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://armenningar.felog.is/MyPage.aspx> from <POST https://armenningar.felog.is/UsersLogin.aspx>
+2015-09-17 22:02:26+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/MyPage.aspx> (referer: https://armenningar.felog.is/UsersLogin.aspx)
+2015-09-17 22:02:26+0000 [norix] DEBUG: Log message
+2015-09-17 22:02:26+0000 [norix] INFO: Hi, I am in, what now... 
+2015-09-17 22:02:26+0000 [norix] DEBUG: Seminar added to collection
+2015-09-17 22:02:26+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'age_group': u'Kr\xedli KK og KVK',
+ 'group_url': u'ctl00$ContentPlaceHolder1$repeaterUserAccess$ctl01$LinkButton1',
+ 'period': u'05.09.2015 - 07.11.2015',
+ 'players_count': u'14',
+ 'seminar_id': 29335990,
+ 'seminar_name': u'Laugardagar kl. 10:00',
+ 'sport_department': u'Taekwondodeild'}
+2015-09-17 22:02:26+0000 [norix] DEBUG: Seminar added to collection
+2015-09-17 22:02:26+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'age_group': u'Yngri byrjendur KK og KVK',
+ 'group_url': u'ctl00$ContentPlaceHolder1$repeaterUserAccess$ctl02$LinkButton1',
+ 'period': u'26.08.2015 - 18.12.2015',
+ 'players_count': u'9',
+ 'seminar_id': 13983856,
+ 'seminar_name': u'Gulir',
+ 'sport_department': u'Taekwondodeild'}
+2015-09-17 22:02:26+0000 [norix] DEBUG: Seminar added to collection
+2015-09-17 22:02:26+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'age_group': u'Eldri byrjendur KK og KVK',
+ 'group_url': u'ctl00$ContentPlaceHolder1$repeaterUserAccess$ctl03$LinkButton1',
+ 'period': u'26.08.2015 - 18.12.2015',
+ 'players_count': u'2',
+ 'seminar_id': 19628440,
+ 'seminar_name': u'Orange',
+ 'sport_department': u'Taekwondodeild'}
+2015-09-17 22:02:26+0000 [norix] DEBUG: Seminar added to collection
+2015-09-17 22:02:26+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'age_group': u'Yngri framhaldsh\xf3pur KK og KVK',
+ 'group_url': u'ctl00$ContentPlaceHolder1$repeaterUserAccess$ctl04$LinkButton1',
+ 'period': u'26.08.2015 - 18.12.2015',
+ 'players_count': u'5',
+ 'seminar_id': 15004629,
+ 'seminar_name': u'Bl\xe1ir',
+ 'sport_department': u'Taekwondodeild'}
+2015-09-17 22:02:26+0000 [norix] DEBUG: Seminar added to collection
+2015-09-17 22:02:26+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'age_group': u'Drekar KK og KVK',
+ 'group_url': u'ctl00$ContentPlaceHolder1$repeaterUserAccess$ctl05$LinkButton1',
+ 'period': u'26.08.2015 - 18.12.2015',
+ 'players_count': u'10',
+ 'seminar_id': 8690972,
+ 'seminar_name': u'Byrjendur og lengra komnir 13 \xe1ra og eldri',
+ 'sport_department': u'Taekwondodeild'}
+2015-09-17 22:02:26+0000 [norix] DEBUG: Seminar added to collection
+2015-09-17 22:02:26+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'age_group': u'Framhaldsh\xf3pur KK og KVK',
+ 'group_url': u'ctl00$ContentPlaceHolder1$repeaterUserAccess$ctl06$LinkButton1',
+ 'period': u'26.08.2015 - 18.12.2015',
+ 'players_count': u'15',
+ 'seminar_id': 28828079,
+ 'seminar_name': u'Rau\xf0ir',
+ 'sport_department': u'Taekwondodeild'}
+2015-09-17 22:02:26+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://armenningar.felog.is/ShowGroupMembers.aspx> from <POST https://armenningar.felog.is/MyPage.aspx>
+2015-09-17 22:02:55+0000 [scrapy] INFO: Crawled 2 pages (at 1 pages/min), scraped 6 items (at 6 items/min)
+2015-09-17 22:03:55+0000 [scrapy] INFO: Crawled 2 pages (at 0 pages/min), scraped 6 items (at 0 items/min)
+2015-09-17 22:03:56+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+2015-09-17 22:03:56+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'',
+ 'phone': u'',
+ 'player_name': u'Isad\xf3ra Bjarkard\xf3ttir Barney',
+ 'seminars': 19628440,
+ 'ssn': u'031002-3380',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 22:03:56+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/ShowGroupMembers.aspx>
+{'email': u'rosasturlu@hotmail.com',
+ 'phone': u'8686029',
+ 'player_name': u'Styrmir Hrafn Steinunnarson',
+ 'seminars': 19628440,
+ 'ssn': u'270704-2120',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-17 22:03:56+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://armenningar.felog.is/ShowGroupMembers.aspx> from <POST https://armenningar.felog.is/MyPage.aspx>
+2015-09-17 22:04:55+0000 [scrapy] INFO: Crawled 3 pages (at 1 pages/min), scraped 8 items (at 2 items/min)
+2015-09-17 22:05:26+0000 [scrapy] DEBUG: Retrying <POST https://armenningar.felog.is/MyPage.aspx> (failed 1 times): User timeout caused connection failure: Getting https://armenningar.felog.is/MyPage.aspx took longer than 180.0 seconds..
+2015-09-17 22:05:26+0000 [scrapy] DEBUG: Retrying <POST https://armenningar.felog.is/MyPage.aspx> (failed 1 times): User timeout caused connection failure: Getting https://armenningar.felog.is/MyPage.aspx took longer than 180.0 seconds..
+2015-09-17 22:05:26+0000 [scrapy] DEBUG: Retrying <POST https://armenningar.felog.is/MyPage.aspx> (failed 1 times): User timeout caused connection failure: Getting https://armenningar.felog.is/MyPage.aspx took longer than 180.0 seconds..
+2015-09-17 22:05:26+0000 [scrapy] DEBUG: Retrying <POST https://armenningar.felog.is/MyPage.aspx> (failed 1 times): User timeout caused connection failure: Getting https://armenningar.felog.is/MyPage.aspx took longer than 180.0 seconds..
+2015-09-17 22:05:55+0000 [scrapy] INFO: Crawled 3 pages (at 0 pages/min), scraped 8 items (at 0 items/min)
+2015-09-17 22:06:02+0000 [scrapy] DEBUG: Crawled (200) <POST https://armenningar.felog.is/MyPage.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+2015-09-17 22:06:02+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'email': u'Laugardagar kl. 10:00',
+ 'phone': u'05.09.2015 - 07.11.2015',
+ 'player_name': u'Kr\xedli KK og KVK',
+ 'seminars': 15004629,
+ 'ssn': u'Taekwondodeild',
+ 'status': u'14'}
+2015-09-17 22:06:02+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'email': u'Gulir',
+ 'phone': u'26.08.2015 - 18.12.2015',
+ 'player_name': u'Yngri byrjendur KK og KVK',
+ 'seminars': 15004629,
+ 'ssn': u'Taekwondodeild',
+ 'status': u'9'}
+2015-09-17 22:06:02+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'email': u'Orange',
+ 'phone': u'26.08.2015 - 18.12.2015',
+ 'player_name': u'Eldri byrjendur KK og KVK',
+ 'seminars': 15004629,
+ 'ssn': u'Taekwondodeild',
+ 'status': u'2'}
+2015-09-17 22:06:02+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'email': u'Bl\xe1ir',
+ 'phone': u'26.08.2015 - 18.12.2015',
+ 'player_name': u'Yngri framhaldsh\xf3pur KK og KVK',
+ 'seminars': 15004629,
+ 'ssn': u'Taekwondodeild',
+ 'status': u'5'}
+2015-09-17 22:06:02+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'email': u'Byrjendur og lengra komnir 13 \xe1ra og eldri',
+ 'phone': u'26.08.2015 - 18.12.2015',
+ 'player_name': u'Drekar KK og KVK',
+ 'seminars': 15004629,
+ 'ssn': u'Taekwondodeild',
+ 'status': u'10'}
+2015-09-17 22:06:02+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'email': u'Rau\xf0ir',
+ 'phone': u'26.08.2015 - 18.12.2015',
+ 'player_name': u'Framhaldsh\xf3pur KK og KVK',
+ 'seminars': 15004629,
+ 'ssn': u'Taekwondodeild',
+ 'status': u'15'}
+2015-09-17 22:06:17+0000 [scrapy] DEBUG: Crawled (200) <POST https://armenningar.felog.is/MyPage.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+2015-09-17 22:06:17+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'email': u'Laugardagar kl. 10:00',
+ 'phone': u'05.09.2015 - 07.11.2015',
+ 'player_name': u'Kr\xedli KK og KVK',
+ 'seminars': 29335990,
+ 'ssn': u'Taekwondodeild',
+ 'status': u'14'}
+2015-09-17 22:06:17+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'email': u'Gulir',
+ 'phone': u'26.08.2015 - 18.12.2015',
+ 'player_name': u'Yngri byrjendur KK og KVK',
+ 'seminars': 29335990,
+ 'ssn': u'Taekwondodeild',
+ 'status': u'9'}
+2015-09-17 22:06:17+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'email': u'Orange',
+ 'phone': u'26.08.2015 - 18.12.2015',
+ 'player_name': u'Eldri byrjendur KK og KVK',
+ 'seminars': 29335990,
+ 'ssn': u'Taekwondodeild',
+ 'status': u'2'}
+2015-09-17 22:06:17+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'email': u'Bl\xe1ir',
+ 'phone': u'26.08.2015 - 18.12.2015',
+ 'player_name': u'Yngri framhaldsh\xf3pur KK og KVK',
+ 'seminars': 29335990,
+ 'ssn': u'Taekwondodeild',
+ 'status': u'5'}
+2015-09-17 22:06:17+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'email': u'Byrjendur og lengra komnir 13 \xe1ra og eldri',
+ 'phone': u'26.08.2015 - 18.12.2015',
+ 'player_name': u'Drekar KK og KVK',
+ 'seminars': 29335990,
+ 'ssn': u'Taekwondodeild',
+ 'status': u'10'}
+2015-09-17 22:06:17+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'email': u'Rau\xf0ir',
+ 'phone': u'26.08.2015 - 18.12.2015',
+ 'player_name': u'Framhaldsh\xf3pur KK og KVK',
+ 'seminars': 29335990,
+ 'ssn': u'Taekwondodeild',
+ 'status': u'15'}
+2015-09-17 22:06:33+0000 [scrapy] DEBUG: Crawled (200) <POST https://armenningar.felog.is/MyPage.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+2015-09-17 22:06:33+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'email': u'Laugardagar kl. 10:00',
+ 'phone': u'05.09.2015 - 07.11.2015',
+ 'player_name': u'Kr\xedli KK og KVK',
+ 'seminars': 28828079,
+ 'ssn': u'Taekwondodeild',
+ 'status': u'14'}
+2015-09-17 22:06:33+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'email': u'Gulir',
+ 'phone': u'26.08.2015 - 18.12.2015',
+ 'player_name': u'Yngri byrjendur KK og KVK',
+ 'seminars': 28828079,
+ 'ssn': u'Taekwondodeild',
+ 'status': u'9'}
+2015-09-17 22:06:33+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'email': u'Orange',
+ 'phone': u'26.08.2015 - 18.12.2015',
+ 'player_name': u'Eldri byrjendur KK og KVK',
+ 'seminars': 28828079,
+ 'ssn': u'Taekwondodeild',
+ 'status': u'2'}
+2015-09-17 22:06:33+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'email': u'Bl\xe1ir',
+ 'phone': u'26.08.2015 - 18.12.2015',
+ 'player_name': u'Yngri framhaldsh\xf3pur KK og KVK',
+ 'seminars': 28828079,
+ 'ssn': u'Taekwondodeild',
+ 'status': u'5'}
+2015-09-17 22:06:33+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'email': u'Byrjendur og lengra komnir 13 \xe1ra og eldri',
+ 'phone': u'26.08.2015 - 18.12.2015',
+ 'player_name': u'Drekar KK og KVK',
+ 'seminars': 28828079,
+ 'ssn': u'Taekwondodeild',
+ 'status': u'10'}
+2015-09-17 22:06:33+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'email': u'Rau\xf0ir',
+ 'phone': u'26.08.2015 - 18.12.2015',
+ 'player_name': u'Framhaldsh\xf3pur KK og KVK',
+ 'seminars': 28828079,
+ 'ssn': u'Taekwondodeild',
+ 'status': u'15'}
+2015-09-17 22:06:48+0000 [scrapy] DEBUG: Crawled (200) <POST https://armenningar.felog.is/MyPage.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+2015-09-17 22:06:48+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'email': u'Laugardagar kl. 10:00',
+ 'phone': u'05.09.2015 - 07.11.2015',
+ 'player_name': u'Kr\xedli KK og KVK',
+ 'seminars': 8690972,
+ 'ssn': u'Taekwondodeild',
+ 'status': u'14'}
+2015-09-17 22:06:48+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'email': u'Gulir',
+ 'phone': u'26.08.2015 - 18.12.2015',
+ 'player_name': u'Yngri byrjendur KK og KVK',
+ 'seminars': 8690972,
+ 'ssn': u'Taekwondodeild',
+ 'status': u'9'}
+2015-09-17 22:06:48+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'email': u'Orange',
+ 'phone': u'26.08.2015 - 18.12.2015',
+ 'player_name': u'Eldri byrjendur KK og KVK',
+ 'seminars': 8690972,
+ 'ssn': u'Taekwondodeild',
+ 'status': u'2'}
+2015-09-17 22:06:48+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'email': u'Bl\xe1ir',
+ 'phone': u'26.08.2015 - 18.12.2015',
+ 'player_name': u'Yngri framhaldsh\xf3pur KK og KVK',
+ 'seminars': 8690972,
+ 'ssn': u'Taekwondodeild',
+ 'status': u'5'}
+2015-09-17 22:06:48+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'email': u'Byrjendur og lengra komnir 13 \xe1ra og eldri',
+ 'phone': u'26.08.2015 - 18.12.2015',
+ 'player_name': u'Drekar KK og KVK',
+ 'seminars': 8690972,
+ 'ssn': u'Taekwondodeild',
+ 'status': u'10'}
+2015-09-17 22:06:48+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'email': u'Rau\xf0ir',
+ 'phone': u'26.08.2015 - 18.12.2015',
+ 'player_name': u'Framhaldsh\xf3pur KK og KVK',
+ 'seminars': 8690972,
+ 'ssn': u'Taekwondodeild',
+ 'status': u'15'}
+2015-09-17 22:06:55+0000 [scrapy] INFO: Crawled 7 pages (at 4 pages/min), scraped 32 items (at 24 items/min)
+2015-09-17 22:06:57+0000 [scrapy] DEBUG: Retrying <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (failed 1 times): User timeout caused connection failure: Getting https://armenningar.felog.is/ShowGroupMembers.aspx took longer than 180.0 seconds..
+2015-09-17 22:07:55+0000 [scrapy] INFO: Crawled 7 pages (at 0 pages/min), scraped 32 items (at 0 items/min)
+2015-09-17 22:08:55+0000 [scrapy] INFO: Crawled 7 pages (at 0 pages/min), scraped 32 items (at 0 items/min)
+2015-09-17 22:09:20+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+2015-09-17 22:09:20+0000 [scrapy] INFO: Closing spider (finished)
+2015-09-17 22:09:20+0000 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/exception_count': 5,
+ 'downloader/exception_type_count/twisted.internet.error.TimeoutError': 5,
+ 'downloader/request_bytes': 35738,
+ 'downloader/request_count': 17,
+ 'downloader/request_method_count/GET': 6,
+ 'downloader/request_method_count/POST': 11,
+ 'downloader/response_bytes': 200821,
+ 'downloader/response_count': 12,
+ 'downloader/response_status_count/200': 8,
+ 'downloader/response_status_count/302': 3,
+ 'downloader/response_status_count/303': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2015, 9, 17, 22, 9, 20, 178981),
+ 'item_scraped_count': 32,
+ 'log_count/DEBUG': 143,
+ 'log_count/INFO': 35,
+ 'log_count/WARNING': 1,
+ 'request_depth_max': 2,
+ 'response_received_count': 8,
+ 'scheduler/dequeued': 17,
+ 'scheduler/dequeued/memory': 17,
+ 'scheduler/enqueued': 17,
+ 'scheduler/enqueued/memory': 17,
+ 'start_time': datetime.datetime(2015, 9, 17, 21, 57, 55, 446758)}
+2015-09-17 22:09:20+0000 [scrapy] INFO: Spider closed (finished)

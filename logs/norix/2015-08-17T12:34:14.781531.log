@@ -1,0 +1,42 @@
+2015-08-17 12:34:14+0000 [scrapy] DEBUG: Redirecting (303) to <GET https://armenningar.felog.is/UsersLogin.aspx> from <GET http://armenningar.felog.is/UsersLogin.aspx>
+2015-08-17 12:34:15+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/UsersLogin.aspx> (referer: None)
+2015-08-17 12:34:15+0000 [scrapy] ERROR: Spider error processing <GET https://armenningar.felog.is/UsersLogin.aspx> (referer: None)
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/utils/defer.py", line 96, in iter_errback
+    yield next(it)
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 28, in process_spider_output
+    for x in result:
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 54, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spiders/crawl.py", line 67, in _parse_response
+    cb_res = callback(response, **cb_kwargs) or ()
+  File "/Users/nonni/Code/norix/norix/norix/spiders/norix_spider.py", line 48, in parse_start_url
+    print('Pass:', response.meta['password'])
+KeyError: 'password'
+2015-08-17 12:34:15+0000 [scrapy] INFO: Closing spider (finished)
+2015-08-17 12:34:15+0000 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 616,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 12383,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 1,
+ 'downloader/response_status_count/303': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2015, 8, 17, 12, 34, 15, 219016),
+ 'log_count/DEBUG': 2,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 2,
+ 'scheduler/dequeued/memory': 2,
+ 'scheduler/enqueued': 2,
+ 'scheduler/enqueued/memory': 2,
+ 'spider_exceptions/KeyError': 1,
+ 'start_time': datetime.datetime(2015, 8, 17, 12, 34, 14, 959810)}
+2015-08-17 12:34:15+0000 [scrapy] INFO: Spider closed (finished)

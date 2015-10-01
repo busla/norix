@@ -1,0 +1,532 @@
+2015-08-28 21:49:04+0000 [scrapy] DEBUG: Redirecting (303) to <GET https://armenningar.felog.is/UsersLogin.aspx> from <GET http://armenningar.felog.is/UsersLogin.aspx>
+2015-08-28 21:49:04+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/UsersLogin.aspx> (referer: None)
+2015-08-28 21:49:04+0000 [norix] INFO: Logging in to:  https://armenningar.felog.is/UsersLogin.aspx
+2015-08-28 21:49:04+0000 [norix] INFO: User:  levy
+2015-08-28 21:49:04+0000 [norix] INFO: Password:  tkd
+2015-08-28 21:49:04+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://armenningar.felog.is/MyPage.aspx> from <POST https://armenningar.felog.is/UsersLogin.aspx>
+2015-08-28 21:49:04+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/MyPage.aspx> (referer: https://armenningar.felog.is/UsersLogin.aspx)
+2015-08-28 21:49:04+0000 [norix] DEBUG: Log message
+2015-08-28 21:49:04+0000 [norix] INFO: Hi, I am in, what now... 
+2015-08-28 21:49:04+0000 [scrapy] ERROR: Error processing {'age_group': u'Kr\xedli KK og KVK',
+ 'group_url': u'ctl00$ContentPlaceHolder1$repeaterUserAccess$ctl01$LinkButton1',
+ 'period': u'05.09.2015 - 07.11.2015',
+ 'players_count': u'9',
+ 'seminar': u'Laugardagar kl. 10:00',
+ 'seminar_id': 'b5a3b771-bf96-4afb-a4dd-b8c85da8d19b',
+ 'sport_department': u'Taekwondodeild'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 59, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:04+0000 [scrapy] ERROR: Error processing {'age_group': u'Yngri byrjendur KK og KVK',
+ 'group_url': u'ctl00$ContentPlaceHolder1$repeaterUserAccess$ctl02$LinkButton1',
+ 'period': u'26.08.2015 - 18.12.2015',
+ 'players_count': u'3',
+ 'seminar': u'Gulir',
+ 'seminar_id': 'a5b8f2e0-aded-4c5d-86ef-e154882e9ac6',
+ 'sport_department': u'Taekwondodeild'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 59, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:04+0000 [scrapy] ERROR: Error processing {'age_group': u'Eldri byrjendur KK og KVK',
+ 'group_url': u'ctl00$ContentPlaceHolder1$repeaterUserAccess$ctl03$LinkButton1',
+ 'period': u'26.08.2015 - 18.12.2015',
+ 'players_count': u'1',
+ 'seminar': u'Orange',
+ 'seminar_id': 'af638da3-b67b-43fb-b6a4-8c3e198c2ff4',
+ 'sport_department': u'Taekwondodeild'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 59, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:04+0000 [scrapy] ERROR: Error processing {'age_group': u'Yngri framhaldsh\xf3pur KK og KVK',
+ 'group_url': u'ctl00$ContentPlaceHolder1$repeaterUserAccess$ctl04$LinkButton1',
+ 'period': u'26.08.2015 - 18.12.2015',
+ 'players_count': u'2',
+ 'seminar': u'Bl\xe1ir',
+ 'seminar_id': '623f4f24-0f56-425c-bfc8-e2655a2d7b52',
+ 'sport_department': u'Taekwondodeild'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 59, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:04+0000 [scrapy] ERROR: Error processing {'age_group': u'Drekar KK og KVK',
+ 'group_url': u'ctl00$ContentPlaceHolder1$repeaterUserAccess$ctl05$LinkButton1',
+ 'period': u'26.08.2015 - 18.12.2015',
+ 'players_count': u'8',
+ 'seminar': u'Byrjendur og lengra komnir 13 \xe1ra og eldri',
+ 'seminar_id': '9ce7b2c0-cc0d-45a4-a5d8-7b022e8fcd2f',
+ 'sport_department': u'Taekwondodeild'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 59, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:04+0000 [scrapy] ERROR: Error processing {'age_group': u'Framhaldsh\xf3pur KK og KVK',
+ 'group_url': u'ctl00$ContentPlaceHolder1$repeaterUserAccess$ctl06$LinkButton1',
+ 'period': u'26.08.2015 - 18.12.2015',
+ 'players_count': u'4',
+ 'seminar': u'Rau\xf0ir',
+ 'seminar_id': '3ad79c42-4b46-4658-acc0-eed0bb04dd5d',
+ 'sport_department': u'Taekwondodeild'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 59, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:04+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://armenningar.felog.is/ShowGroupMembers.aspx> from <POST https://armenningar.felog.is/MyPage.aspx>
+2015-08-28 21:49:04+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+2015-08-28 21:49:04+0000 [scrapy] ERROR: Error processing {'email': u'josno@simnet.is',
+ 'phone': u'8970739',
+ 'player_name': u'Snorri Esek\xedel J\xf3hannesson',
+ 'seminars': '623f4f24-0f56-425c-bfc8-e2655a2d7b52',
+ 'ssn': u'050904-2290',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:04+0000 [scrapy] ERROR: Error processing {'email': u'dabbsa9@gmail.com',
+ 'phone': u'8209529',
+ 'player_name': u'Sunna Lind Ingvarsd\xf3ttir',
+ 'seminars': '623f4f24-0f56-425c-bfc8-e2655a2d7b52',
+ 'ssn': u'210107-2580',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:05+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://armenningar.felog.is/ShowGroupMembers.aspx> from <POST https://armenningar.felog.is/MyPage.aspx>
+2015-08-28 21:49:05+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://armenningar.felog.is/ShowGroupMembers.aspx> from <POST https://armenningar.felog.is/MyPage.aspx>
+2015-08-28 21:49:05+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://armenningar.felog.is/ShowGroupMembers.aspx> from <POST https://armenningar.felog.is/MyPage.aspx>
+2015-08-28 21:49:05+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://armenningar.felog.is/ShowGroupMembers.aspx> from <POST https://armenningar.felog.is/MyPage.aspx>
+2015-08-28 21:49:05+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+2015-08-28 21:49:05+0000 [scrapy] ERROR: Error processing {'email': u'padresmurfa@gmail.com;runaeinars@hotmail.com',
+ 'phone': u'8941929',
+ 'player_name': u'Einar P\xe1ll Dav\xed\xf0sson',
+ 'seminars': '3ad79c42-4b46-4658-acc0-eed0bb04dd5d',
+ 'ssn': u'071207-3230',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:05+0000 [scrapy] ERROR: Error processing {'email': u'Birnadiso@hotmail.com',
+ 'phone': u'8935929',
+ 'player_name': u'\xd3lafur P\xe9tur \xde\xf3rj\xf3nsson',
+ 'seminars': '3ad79c42-4b46-4658-acc0-eed0bb04dd5d',
+ 'ssn': u'110308-3020',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:05+0000 [scrapy] ERROR: Error processing {'email': u'vala.sig@gmail.com',
+ 'phone': u'8422945',
+ 'player_name': u'\xdalfar Heimisson',
+ 'seminars': '3ad79c42-4b46-4658-acc0-eed0bb04dd5d',
+ 'ssn': u'030207-2110',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:05+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+2015-08-28 21:49:05+0000 [scrapy] ERROR: Error processing {'email': u'dabbsa9@gmail.com',
+ 'phone': u'8209529',
+ 'player_name': u'Dagbj\xf6rt R\xfanarsd\xf3ttir',
+ 'seminars': 'af638da3-b67b-43fb-b6a4-8c3e198c2ff4',
+ 'ssn': u'260979-5829',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:05+0000 [scrapy] ERROR: Error processing {'email': u'padresmurfa@gmail.com',
+ 'phone': u'5531929',
+ 'player_name': u'Dav\xed\xf0 Hermann Brandt',
+ 'seminars': 'af638da3-b67b-43fb-b6a4-8c3e198c2ff4',
+ 'ssn': u'170472-6169',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:05+0000 [scrapy] ERROR: Error processing {'email': u'hie@mi.is',
+ 'phone': u'8252513',
+ 'player_name': u'H\xf3lmfr\xed\xf0ur Inga Ey\xfe\xf3rsd\xf3ttir',
+ 'seminars': 'af638da3-b67b-43fb-b6a4-8c3e198c2ff4',
+ 'ssn': u'180771-5739',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:05+0000 [scrapy] ERROR: Error processing {'email': u'gylfi75@hotmail.com',
+ 'phone': u'7798088',
+ 'player_name': u'J\xf6kull Orri Gylfason',
+ 'seminars': 'af638da3-b67b-43fb-b6a4-8c3e198c2ff4',
+ 'ssn': u'281002-4490',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:05+0000 [scrapy] ERROR: Error processing {'email': u'rosalarusdottir@gmail.com',
+ 'phone': u'6978414',
+ 'player_name': u'R\xf3sa L\xe1rusd\xf3ttir',
+ 'seminars': 'af638da3-b67b-43fb-b6a4-8c3e198c2ff4',
+ 'ssn': u'040477-5789',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:05+0000 [scrapy] ERROR: Error processing {'email': u'smj9@hi.is',
+ 'phone': u'8674359',
+ 'player_name': u'Sandra Mj\xf6ll J\xf3nsd\xf3ttir',
+ 'seminars': 'af638da3-b67b-43fb-b6a4-8c3e198c2ff4',
+ 'ssn': u'191188-2849',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:05+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+2015-08-28 21:49:05+0000 [scrapy] ERROR: Error processing {'email': u'vilhjalmur.vilhjalmsson@nyherji.is',
+ 'phone': u'8434305',
+ 'player_name': u'Vilhj\xe1lmur \xde\xf3r Vilhj\xe1lmsson',
+ 'seminars': 'af638da3-b67b-43fb-b6a4-8c3e198c2ff4',
+ 'ssn': u'180275-4019',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:05+0000 [scrapy] ERROR: Error processing {'email': u'grettir.einarsson@gmail.com',
+ 'phone': u'8209375',
+ 'player_name': u'\xde\xf3rarinn Grettir Einarsson',
+ 'seminars': 'af638da3-b67b-43fb-b6a4-8c3e198c2ff4',
+ 'ssn': u'190575-4629',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:05+0000 [scrapy] ERROR: Error processing {'email': u'padresmurfa@gmail.com;runaeinars@hotmail.com',
+ 'phone': u'8941929',
+ 'player_name': u'Einar P\xe1ll Dav\xed\xf0sson',
+ 'seminars': 'a5b8f2e0-aded-4c5d-86ef-e154882e9ac6',
+ 'ssn': u'071207-3230',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:05+0000 [scrapy] ERROR: Error processing {'email': u'Birnadiso@hotmail.com',
+ 'phone': u'8935929',
+ 'player_name': u'\xd3lafur P\xe9tur \xde\xf3rj\xf3nsson',
+ 'seminars': 'a5b8f2e0-aded-4c5d-86ef-e154882e9ac6',
+ 'ssn': u'110308-3020',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:05+0000 [scrapy] ERROR: Error processing {'email': u'vala.sig@gmail.com',
+ 'phone': u'8422945',
+ 'player_name': u'\xdalfar Heimisson',
+ 'seminars': 'a5b8f2e0-aded-4c5d-86ef-e154882e9ac6',
+ 'ssn': u'030207-2110',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:06+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://armenningar.felog.is/ShowGroupMembers.aspx> from <POST https://armenningar.felog.is/MyPage.aspx>
+2015-08-28 21:49:06+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+2015-08-28 21:49:06+0000 [scrapy] ERROR: Error processing {'email': u'',
+ 'phone': u'',
+ 'player_name': u'\xc1r\xfan Emma J\xf3ns Helgud\xf3ttir',
+ 'seminars': 'b5a3b771-bf96-4afb-a4dd-b8c85da8d19b',
+ 'ssn': u'290311-4110',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:06+0000 [scrapy] ERROR: Error processing {'email': u'hjodda29@hotmail.com',
+ 'phone': u'8680623',
+ 'player_name': u'Breki Hrafn Helgason',
+ 'seminars': 'b5a3b771-bf96-4afb-a4dd-b8c85da8d19b',
+ 'ssn': u'120212-2140',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:06+0000 [scrapy] ERROR: Error processing {'email': u'',
+ 'phone': u'',
+ 'player_name': u'Egill Hugr\xfanarson Gu\xf0j\xf3nsson',
+ 'seminars': 'b5a3b771-bf96-4afb-a4dd-b8c85da8d19b',
+ 'ssn': u'290212-2000',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:06+0000 [scrapy] ERROR: Error processing {'email': u'Elsarg@simnet.is',
+ 'phone': u'8680657',
+ 'player_name': u'Erik Bjarki Juto',
+ 'seminars': 'b5a3b771-bf96-4afb-a4dd-b8c85da8d19b',
+ 'ssn': u'260511-2460',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:06+0000 [scrapy] ERROR: Error processing {'email': u'audurkvaran@gmail.com',
+ 'phone': u'6941056',
+ 'player_name': u'Erpur \xde\xf3r\xf0arson',
+ 'seminars': 'b5a3b771-bf96-4afb-a4dd-b8c85da8d19b',
+ 'ssn': u'250612-3030',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:06+0000 [scrapy] ERROR: Error processing {'email': u'audurkvaran@gmail.com',
+ 'phone': u'6941056',
+ 'player_name': u'Grettir \xde\xf3r\xf0arson',
+ 'seminars': 'b5a3b771-bf96-4afb-a4dd-b8c85da8d19b',
+ 'ssn': u'191010-2560',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:06+0000 [scrapy] ERROR: Error processing {'email': u'',
+ 'phone': u'',
+ 'player_name': u'Heba Hallsd\xf3ttir',
+ 'seminars': 'b5a3b771-bf96-4afb-a4dd-b8c85da8d19b',
+ 'ssn': u'160112-2120',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:06+0000 [scrapy] ERROR: Error processing {'email': u'rii@eimskip.is',
+ 'phone': u'8257676',
+ 'player_name': u'H\xf3lmar Loki Ragnarsson',
+ 'seminars': 'b5a3b771-bf96-4afb-a4dd-b8c85da8d19b',
+ 'ssn': u'031011-2800',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:06+0000 [scrapy] ERROR: Error processing {'email': u'katapalsdottir@gmail.com',
+ 'phone': u'8664488',
+ 'player_name': u'J\xf3n \xd3ttar J\xf3nsson',
+ 'seminars': 'b5a3b771-bf96-4afb-a4dd-b8c85da8d19b',
+ 'ssn': u'210612-3350',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:06+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+2015-08-28 21:49:06+0000 [scrapy] ERROR: Error processing {'email': u'',
+ 'phone': u'',
+ 'player_name': u'\xc1r\xfan Emma J\xf3ns Helgud\xf3ttir',
+ 'seminars': '9ce7b2c0-cc0d-45a4-a5d8-7b022e8fcd2f',
+ 'ssn': u'290311-4110',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:06+0000 [scrapy] ERROR: Error processing {'email': u'hjodda29@hotmail.com',
+ 'phone': u'8680623',
+ 'player_name': u'Breki Hrafn Helgason',
+ 'seminars': '9ce7b2c0-cc0d-45a4-a5d8-7b022e8fcd2f',
+ 'ssn': u'120212-2140',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:06+0000 [scrapy] ERROR: Error processing {'email': u'',
+ 'phone': u'',
+ 'player_name': u'Egill Hugr\xfanarson Gu\xf0j\xf3nsson',
+ 'seminars': '9ce7b2c0-cc0d-45a4-a5d8-7b022e8fcd2f',
+ 'ssn': u'290212-2000',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:06+0000 [scrapy] ERROR: Error processing {'email': u'Elsarg@simnet.is',
+ 'phone': u'8680657',
+ 'player_name': u'Erik Bjarki Juto',
+ 'seminars': '9ce7b2c0-cc0d-45a4-a5d8-7b022e8fcd2f',
+ 'ssn': u'260511-2460',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:06+0000 [scrapy] ERROR: Error processing {'email': u'audurkvaran@gmail.com',
+ 'phone': u'6941056',
+ 'player_name': u'Erpur \xde\xf3r\xf0arson',
+ 'seminars': '9ce7b2c0-cc0d-45a4-a5d8-7b022e8fcd2f',
+ 'ssn': u'250612-3030',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:06+0000 [scrapy] ERROR: Error processing {'email': u'audurkvaran@gmail.com',
+ 'phone': u'6941056',
+ 'player_name': u'Grettir \xde\xf3r\xf0arson',
+ 'seminars': '9ce7b2c0-cc0d-45a4-a5d8-7b022e8fcd2f',
+ 'ssn': u'191010-2560',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:06+0000 [scrapy] ERROR: Error processing {'email': u'',
+ 'phone': u'',
+ 'player_name': u'Heba Hallsd\xf3ttir',
+ 'seminars': '9ce7b2c0-cc0d-45a4-a5d8-7b022e8fcd2f',
+ 'ssn': u'160112-2120',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:06+0000 [scrapy] ERROR: Error processing {'email': u'rii@eimskip.is',
+ 'phone': u'8257676',
+ 'player_name': u'H\xf3lmar Loki Ragnarsson',
+ 'seminars': '9ce7b2c0-cc0d-45a4-a5d8-7b022e8fcd2f',
+ 'ssn': u'031011-2800',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:06+0000 [scrapy] ERROR: Error processing {'email': u'katapalsdottir@gmail.com',
+ 'phone': u'8664488',
+ 'player_name': u'J\xf3n \xd3ttar J\xf3nsson',
+ 'seminars': '9ce7b2c0-cc0d-45a4-a5d8-7b022e8fcd2f',
+ 'ssn': u'210612-3350',
+ 'status': u'Skr\xe1\xf0(ur)'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 30, in process_item
+    self.collection.update(dict(item), upsert=true)
+NameError: global name 'true' is not defined
+2015-08-28 21:49:06+0000 [scrapy] INFO: Closing spider (finished)
+2015-08-28 21:49:06+0000 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 24159,
+ 'downloader/request_count': 16,
+ 'downloader/request_method_count/GET': 9,
+ 'downloader/request_method_count/POST': 7,
+ 'downloader/response_bytes': 308186,
+ 'downloader/response_count': 16,
+ 'downloader/response_status_count/200': 8,
+ 'downloader/response_status_count/302': 7,
+ 'downloader/response_status_count/303': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2015, 8, 28, 21, 49, 6, 834757),
+ 'log_count/DEBUG': 17,
+ 'log_count/ERROR': 40,
+ 'log_count/INFO': 11,
+ 'log_count/WARNING': 1,
+ 'request_depth_max': 2,
+ 'response_received_count': 8,
+ 'scheduler/dequeued': 16,
+ 'scheduler/dequeued/memory': 16,
+ 'scheduler/enqueued': 16,
+ 'scheduler/enqueued/memory': 16,
+ 'start_time': datetime.datetime(2015, 8, 28, 21, 49, 4, 322404)}
+2015-08-28 21:49:06+0000 [scrapy] INFO: Spider closed (finished)

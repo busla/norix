@@ -1,0 +1,2 @@
+2015-09-17 21:54:45+0000 [scrapy] DEBUG: Redirecting (303) to <GET https://armenningar.felog.is/UsersLogin.aspx> from <GET http://armenningar.felog.is/UsersLogin.aspx>
+2015-09-17 21:55:22+0000 [scrapy] DEBUG: Retrying <GET https://armenningar.felog.is/UsersLogin.aspx> (failed 1 times): [<twisted.python.failure.Failure <class 'twisted.internet.error.ConnectionLost'>>]

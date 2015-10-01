@@ -1,0 +1,186 @@
+2015-08-28 13:49:08+0000 [scrapy] DEBUG: Redirecting (303) to <GET https://armenningar.felog.is/UsersLogin.aspx> from <GET http://armenningar.felog.is/UsersLogin.aspx>
+2015-08-28 13:49:08+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/UsersLogin.aspx> (referer: None)
+2015-08-28 13:49:08+0000 [norix] INFO: Logging in to:  https://armenningar.felog.is/UsersLogin.aspx
+2015-08-28 13:49:08+0000 [norix] INFO: User:  levy
+2015-08-28 13:49:08+0000 [norix] INFO: Password:  tkd
+2015-08-28 13:49:08+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://armenningar.felog.is/MyPage.aspx> from <POST https://armenningar.felog.is/UsersLogin.aspx>
+2015-08-28 13:49:08+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/MyPage.aspx> (referer: https://armenningar.felog.is/UsersLogin.aspx)
+2015-08-28 13:49:08+0000 [norix] DEBUG: Log message
+2015-08-28 13:49:08+0000 [norix] INFO: Hi, I am in, what now... 
+2015-08-28 13:49:08+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'age_group': u'Kr\xedli KK og KVK',
+ 'group_url': u'ctl00$ContentPlaceHolder1$repeaterUserAccess$ctl01$LinkButton1',
+ 'period': u'05.09.2015 - 07.11.2015',
+ 'players_count': u'9',
+ 'seminar': u'Laugardagar kl. 10:00',
+ 'seminar_id': u'taekwondodeild1laugardagar kl. 10:000509201507112015',
+ 'sport_department': u'Taekwondodeild'}
+2015-08-28 13:49:08+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'age_group': u'Yngri byrjendur KK og KVK',
+ 'group_url': u'ctl00$ContentPlaceHolder1$repeaterUserAccess$ctl02$LinkButton1',
+ 'period': u'26.08.2015 - 18.12.2015',
+ 'players_count': u'2',
+ 'seminar': u'Gulir',
+ 'seminar_id': u'taekwondodeild2gulir2608201518122015',
+ 'sport_department': u'Taekwondodeild'}
+2015-08-28 13:49:08+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'age_group': u'Eldri byrjendur KK og KVK',
+ 'group_url': u'ctl00$ContentPlaceHolder1$repeaterUserAccess$ctl03$LinkButton1',
+ 'period': u'26.08.2015 - 18.12.2015',
+ 'players_count': u'1',
+ 'seminar': u'Orange',
+ 'seminar_id': u'taekwondodeild3orange2608201518122015',
+ 'sport_department': u'Taekwondodeild'}
+2015-08-28 13:49:08+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'age_group': u'Yngri framhaldsh\xf3pur KK og KVK',
+ 'group_url': u'ctl00$ContentPlaceHolder1$repeaterUserAccess$ctl04$LinkButton1',
+ 'period': u'26.08.2015 - 18.12.2015',
+ 'players_count': u'2',
+ 'seminar': u'Bl\xe1ir',
+ 'seminar_id': u'taekwondodeild4bl\xe1ir2608201518122015',
+ 'sport_department': u'Taekwondodeild'}
+2015-08-28 13:49:08+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'age_group': u'Drekar KK og KVK',
+ 'group_url': u'ctl00$ContentPlaceHolder1$repeaterUserAccess$ctl05$LinkButton1',
+ 'period': u'26.08.2015 - 18.12.2015',
+ 'players_count': u'8',
+ 'seminar': u'Byrjendur og lengra komnir 13 \xe1ra og eldri',
+ 'seminar_id': u'taekwondodeild5byrjendur og lengra komnir 13 \xe1ra og eldri2608201518122015',
+ 'sport_department': u'Taekwondodeild'}
+2015-08-28 13:49:08+0000 [scrapy] DEBUG: Scraped from <200 https://armenningar.felog.is/MyPage.aspx>
+{'age_group': u'Framhaldsh\xf3pur KK og KVK',
+ 'group_url': u'ctl00$ContentPlaceHolder1$repeaterUserAccess$ctl06$LinkButton1',
+ 'period': u'26.08.2015 - 18.12.2015',
+ 'players_count': u'4',
+ 'seminar': u'Rau\xf0ir',
+ 'seminar_id': u'taekwondodeild6rau\xf0ir2608201518122015',
+ 'sport_department': u'Taekwondodeild'}
+2015-08-28 13:49:08+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://armenningar.felog.is/ShowGroupMembers.aspx> from <POST https://armenningar.felog.is/MyPage.aspx>
+2015-08-28 13:49:09+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+2015-08-28 13:49:09+0000 [scrapy] ERROR: Spider error processing <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/utils/defer.py", line 96, in iter_errback
+    yield next(it)
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 28, in process_spider_output
+    for x in result:
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 54, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/nonni/Code/norix/norix/norix/spiders/norix_spider.py", line 147, in parse_players
+    player_item['seminars'] = response.meta['id']
+KeyError: 'id'
+2015-08-28 13:49:09+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://armenningar.felog.is/ShowGroupMembers.aspx> from <POST https://armenningar.felog.is/MyPage.aspx>
+2015-08-28 13:49:09+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+2015-08-28 13:49:09+0000 [scrapy] ERROR: Spider error processing <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/utils/defer.py", line 96, in iter_errback
+    yield next(it)
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 28, in process_spider_output
+    for x in result:
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 54, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/nonni/Code/norix/norix/norix/spiders/norix_spider.py", line 147, in parse_players
+    player_item['seminars'] = response.meta['id']
+KeyError: 'id'
+2015-08-28 13:49:09+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://armenningar.felog.is/ShowGroupMembers.aspx> from <POST https://armenningar.felog.is/MyPage.aspx>
+2015-08-28 13:49:09+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+2015-08-28 13:49:10+0000 [scrapy] ERROR: Spider error processing <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/utils/defer.py", line 96, in iter_errback
+    yield next(it)
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 28, in process_spider_output
+    for x in result:
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 54, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/nonni/Code/norix/norix/norix/spiders/norix_spider.py", line 147, in parse_players
+    player_item['seminars'] = response.meta['id']
+KeyError: 'id'
+2015-08-28 13:49:10+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://armenningar.felog.is/ShowGroupMembers.aspx> from <POST https://armenningar.felog.is/MyPage.aspx>
+2015-08-28 13:49:10+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+2015-08-28 13:49:10+0000 [scrapy] ERROR: Spider error processing <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/utils/defer.py", line 96, in iter_errback
+    yield next(it)
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 28, in process_spider_output
+    for x in result:
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 54, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/nonni/Code/norix/norix/norix/spiders/norix_spider.py", line 147, in parse_players
+    player_item['seminars'] = response.meta['id']
+KeyError: 'id'
+2015-08-28 13:49:10+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://armenningar.felog.is/ShowGroupMembers.aspx> from <POST https://armenningar.felog.is/MyPage.aspx>
+2015-08-28 13:49:10+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+2015-08-28 13:49:10+0000 [scrapy] ERROR: Spider error processing <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/utils/defer.py", line 96, in iter_errback
+    yield next(it)
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 28, in process_spider_output
+    for x in result:
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 54, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/nonni/Code/norix/norix/norix/spiders/norix_spider.py", line 147, in parse_players
+    player_item['seminars'] = response.meta['id']
+KeyError: 'id'
+2015-08-28 13:49:11+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://armenningar.felog.is/ShowGroupMembers.aspx> from <POST https://armenningar.felog.is/MyPage.aspx>
+2015-08-28 13:49:11+0000 [scrapy] DEBUG: Crawled (200) <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+2015-08-28 13:49:11+0000 [scrapy] ERROR: Spider error processing <GET https://armenningar.felog.is/ShowGroupMembers.aspx> (referer: https://armenningar.felog.is/MyPage.aspx)
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/utils/defer.py", line 96, in iter_errback
+    yield next(it)
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/offsite.py", line 28, in process_spider_output
+    for x in result:
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/referer.py", line 22, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/scrapy/spidermiddlewares/depth.py", line 54, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/nonni/Code/norix/norix/norix/spiders/norix_spider.py", line 147, in parse_players
+    player_item['seminars'] = response.meta['id']
+KeyError: 'id'
+2015-08-28 13:49:11+0000 [scrapy] INFO: Closing spider (finished)
+2015-08-28 13:49:11+0000 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 24075,
+ 'downloader/request_count': 16,
+ 'downloader/request_method_count/GET': 9,
+ 'downloader/request_method_count/POST': 7,
+ 'downloader/response_bytes': 295338,
+ 'downloader/response_count': 16,
+ 'downloader/response_status_count/200': 8,
+ 'downloader/response_status_count/302': 7,
+ 'downloader/response_status_count/303': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2015, 8, 28, 13, 49, 11, 587175),
+ 'item_scraped_count': 6,
+ 'log_count/DEBUG': 29,
+ 'log_count/ERROR': 6,
+ 'log_count/INFO': 11,
+ 'log_count/WARNING': 2,
+ 'request_depth_max': 2,
+ 'response_received_count': 8,
+ 'scheduler/dequeued': 16,
+ 'scheduler/dequeued/memory': 16,
+ 'scheduler/enqueued': 16,
+ 'scheduler/enqueued/memory': 16,
+ 'spider_exceptions/KeyError': 6,
+ 'start_time': datetime.datetime(2015, 8, 28, 13, 49, 8, 298391)}
+2015-08-28 13:49:11+0000 [scrapy] INFO: Spider closed (finished)

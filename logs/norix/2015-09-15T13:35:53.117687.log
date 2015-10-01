@@ -1,0 +1,116 @@
+2015-09-15 13:35:53+0000 [scrapy] DEBUG: Redirecting (303) to <GET https://umfg.felog.is/UsersLogin.aspx> from <GET http://umfg.felog.is/UsersLogin.aspx>
+2015-09-15 13:35:53+0000 [scrapy] DEBUG: Crawled (200) <GET https://umfg.felog.is/UsersLogin.aspx> (referer: None)
+2015-09-15 13:35:53+0000 [norix] INFO: Logging in to:  https://umfg.felog.is/UsersLogin.aspx
+2015-09-15 13:35:53+0000 [norix] INFO: User:  jonl
+2015-09-15 13:35:53+0000 [norix] INFO: Password:  190881
+2015-09-15 13:35:53+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://umfg.felog.is/MyPage.aspx> from <POST https://umfg.felog.is/UsersLogin.aspx>
+2015-09-15 13:35:53+0000 [scrapy] DEBUG: Crawled (200) <GET https://umfg.felog.is/MyPage.aspx> (referer: https://umfg.felog.is/UsersLogin.aspx)
+2015-09-15 13:35:53+0000 [norix] DEBUG: Log message
+2015-09-15 13:35:53+0000 [norix] INFO: Hi, I am in, what now... 
+2015-09-15 13:35:54+0000 [scrapy] ERROR: Error processing {'age_group': u'1.2 bekkur KK og KVK',
+ 'group_url': u'ctl00$ContentPlaceHolder1$repeaterUserAccess$ctl01$LinkButton1',
+ 'period': u'01.09.2015 - 31.01.2016',
+ 'players_count': u'1',
+ 'seminar_id': 56040140,
+ 'seminar_name': u'Skr\xe1ning \xed Taekwondodeild sept-des 2015',
+ 'sport_department': u'Taekwondodeild'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 88, in process_item
+    spider.logger.info(json.dumps(user_obj))
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 243, in dumps
+    return _default_encoder.encode(obj)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 207, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 270, in iterencode
+    return _iterencode(o, 0)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <pymongo.cursor.Cursor object at 0x107c85590> is not JSON serializable
+2015-09-15 13:35:54+0000 [scrapy] ERROR: Error processing {'age_group': u'mi\xf0 h\xf3pur KK og KVK',
+ 'group_url': u'ctl00$ContentPlaceHolder1$repeaterUserAccess$ctl02$LinkButton1',
+ 'period': u'01.09.2015 - 31.01.2016',
+ 'players_count': u'4',
+ 'seminar_id': 17628848,
+ 'seminar_name': u'Skr\xe1ning \xed Taekwondodeild sept-des 2015',
+ 'sport_department': u'Taekwondodeild'}
+Traceback (most recent call last):
+  File "/Users/nonni/Code/norix/venv/lib/python2.7/site-packages/twisted/internet/defer.py", line 588, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "/Users/nonni/Code/norix/norix/norix/pipelines.py", line 88, in process_item
+    spider.logger.info(json.dumps(user_obj))
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py", line 243, in dumps
+    return _default_encoder.encode(obj)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 207, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 270, in iterencode
+    return _iterencode(o, 0)
+  File "/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/encoder.py", line 184, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: <pymongo.cursor.Cursor object at 0x107c85690> is not JSON serializable
+2015-09-15 13:35:54+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://umfg.felog.is/ShowGroupMembers.aspx> from <POST https://umfg.felog.is/MyPage.aspx>
+2015-09-15 13:35:54+0000 [scrapy] DEBUG: Crawled (200) <GET https://umfg.felog.is/ShowGroupMembers.aspx> (referer: https://umfg.felog.is/MyPage.aspx)
+2015-09-15 13:35:54+0000 [scrapy] DEBUG: Scraped from <200 https://umfg.felog.is/ShowGroupMembers.aspx>
+{'email': u'gudlaug@grindavik.is',
+ 'phone': u'8940885',
+ 'player_name': u'Franz Haf\xfe\xf3rsson',
+ 'seminars': 17628848,
+ 'ssn': u'130603-2030',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-15 13:35:54+0000 [scrapy] DEBUG: Scraped from <200 https://umfg.felog.is/ShowGroupMembers.aspx>
+{'email': u'heida@snerpa.is',
+ 'phone': u'4568388',
+ 'player_name': u'Gu\xf0mundur Brynjar Bj\xf6rgvinsson',
+ 'seminars': 17628848,
+ 'ssn': u'241005-3050',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-15 13:35:54+0000 [scrapy] DEBUG: Scraped from <200 https://umfg.felog.is/ShowGroupMembers.aspx>
+{'email': u'signy_o@hotmail.com',
+ 'phone': u'6957624',
+ 'player_name': u'\xd3liver Adam Einarsson',
+ 'seminars': 17628848,
+ 'ssn': u'240306-3520',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-15 13:35:54+0000 [scrapy] DEBUG: Scraped from <200 https://umfg.felog.is/ShowGroupMembers.aspx>
+{'email': u'eyglopet@gmail.com',
+ 'phone': u'5878353',
+ 'player_name': u'Sigurj\xf3n Samved Adhikari',
+ 'seminars': 17628848,
+ 'ssn': u'120307-3040',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-15 13:35:54+0000 [scrapy] DEBUG: Redirecting (302) to <GET https://umfg.felog.is/ShowGroupMembers.aspx> from <POST https://umfg.felog.is/MyPage.aspx>
+2015-09-15 13:35:54+0000 [scrapy] DEBUG: Crawled (200) <GET https://umfg.felog.is/ShowGroupMembers.aspx> (referer: https://umfg.felog.is/MyPage.aspx)
+2015-09-15 13:35:54+0000 [scrapy] DEBUG: Scraped from <200 https://umfg.felog.is/ShowGroupMembers.aspx>
+{'email': u'debbyhrolfsson@hotmail.com',
+ 'phone': u'8602708',
+ 'player_name': u'Adriana Lind Da\xf0ad\xf3ttir',
+ 'seminars': 56040140,
+ 'ssn': u'030408-2250',
+ 'status': u'Skr\xe1\xf0(ur)'}
+2015-09-15 13:35:54+0000 [scrapy] INFO: Closing spider (finished)
+2015-09-15 13:35:54+0000 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 7764,
+ 'downloader/request_count': 8,
+ 'downloader/request_method_count/GET': 5,
+ 'downloader/request_method_count/POST': 3,
+ 'downloader/response_bytes': 102347,
+ 'downloader/response_count': 8,
+ 'downloader/response_status_count/200': 4,
+ 'downloader/response_status_count/302': 3,
+ 'downloader/response_status_count/303': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2015, 9, 15, 13, 35, 54, 282923),
+ 'item_scraped_count': 5,
+ 'log_count/DEBUG': 19,
+ 'log_count/ERROR': 2,
+ 'log_count/INFO': 11,
+ 'log_count/WARNING': 1,
+ 'request_depth_max': 2,
+ 'response_received_count': 4,
+ 'scheduler/dequeued': 8,
+ 'scheduler/dequeued/memory': 8,
+ 'scheduler/enqueued': 8,
+ 'scheduler/enqueued/memory': 8,
+ 'start_time': datetime.datetime(2015, 9, 15, 13, 35, 53, 426087)}
+2015-09-15 13:35:54+0000 [scrapy] INFO: Spider closed (finished)
