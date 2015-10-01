@@ -127,9 +127,6 @@ class NorixSpider(CrawlSpider):
             user = self.add_user()
             self.delete_player_seminar_associations(user)
 
-
-            
-
             seminars = response.xpath('//table[@class="itemListTable"]/tr')
             items = []
             for i, seminar in enumerate(seminars):
